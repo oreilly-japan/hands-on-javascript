@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script type="module">
+      import { Klass, func } from "./module.js"
+      import { Klass as Klass2, func as func2 } from "./module2.js"
+      const k = new Klass()
+      const f = func()
+      const k2 = new Klass2()
+      const f2 = func2()
+      console.log(k, f, k2, f2)
+    </script>
+  </head>
+</html>

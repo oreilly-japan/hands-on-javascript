@@ -1,0 +1,8 @@
+{
+  "name": "サンプルアプリ名",
+  "description": "どのようなアプリであるかの説明",
+  "icons": [{
+    "src": "icon.png",
+    "sizes": "192x192"
+  }]
+}

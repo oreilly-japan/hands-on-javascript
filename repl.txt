@@ -1,0 +1,3631 @@
+/*ch01*/
+> console.log("hello, world") 
+> 40+2 
+> let sum = 1                 // Enterだと実行されてしまうのでShift+Enterで改行
+  for (let i of [2, 3, 7]) {  // for文の途中なのでEnterで改行
+    sum *= i                  // for文の途中なのでEnterで改行
+  }                           // Enterだと実行されてしまうのでShift+Enterで改行
+  sum                         // Enterで実行
+> i 
+> ca1.states 
+> ca1.states = "11111111111111111111111111111111111111111" // 1が41個
+> addResult(ca1) 
+> ca1.next() 
+
+/*ch02*/
+> "9.80665"[2] 
+> 9.80665[2] 
+> typeof null 
+> typeof undefined 
+> typeof true 
+> typeof 42 
+> typeof 42n 
+> typeof "物質" 
+> typeof Symbol("貧しき漁夫") 
+> typeof Math 
+> (1 * 2) * 3 
+> 1 * 1 * 3 
+> const pi = 3 
+> (1 * 2) * pi 
+> 1 * 1 * pi 
+> const pi = 3.14 
+> (1 * 2) * pi 
+> 1 * 1 * pi 
+> const %&+* = "Cthulhu" 
+> const abc = "abc", _A_B_C = "_A_B_C", $123 = 123, 日本語 = "日本語" 
+> const 記号 = true 
+> const 記号。 = false 
+> const default = "delinquency" 
+> let radius = 6378 
+> let radius 
+> radius 
+> let radius 
+> radius = 6378 
+> radius = 6378.1366 
+> radius 
+> radius = "産医師異国に向かう" 
+> radius = Symbol("Can I find a trick recalling Pi easily?") 
+> radius = 6378 
+> radius = radius + 0.1366 
+> radius 
+> let boundless 
+> let detectedItem = null 
+> true 
+> false 
+> true && true 
+> true && false 
+> false && true 
+> false && false 
+> true || true 
+> true || false 
+> false || true 
+> false || false 
+> !true 
+> !false 
+> "string" && true 
+> true || 123 
+> !0 
+> !null 
+> !"string" 
+> !!0 
+> !!null 
+> !!"string" 
+> 123 || true 
+> true && console.log("こんにちはこんにちは") 
+> false && console.log("こんにちはこんにちは") 
+> let name = prompt("名前を入力してください") || "未入力" 
+> let promptInt = (msg) => parseInt(prompt(msg)) 
+> let num = promptInt("整数を入力してください") || -9999 
+> let num = promptInt("整数を入力してください") ?? -9999 
+> 1 === 1 
+> 1 === 2 
+> 1 === "1" 
+> 1 === true 
+> 1 !== 1 
+> 1 !== 2 
+> 1 !== "1" 
+> 1 !== true 
+> 1 == 1 
+> 1 == 2 
+> 1 == "1" 
+> 1 == "2" 
+> 1 == true 
+> 1 == false 
+> null === undefined 
+> null == undefined 
+> 1 != 1 
+> 1 != 2 
+> 1 != "1" 
+> 1 != "2" 
+> 1 != true 
+> 1 != false 
+> 42 
+> 299792458 
+> -10911 
+> 9.80665 
+> .142857 
+> 8848. 
+> 0.000000056704 
+> typeof 5.6704e-8 
+> 5.6704e-8 === 0.000000056704 
+> 602000000000000000000000 
+> 6.02E23 
+> 0b101010 
+> 052 
+> 0x2a 
+> 0b101010 + 052 + 0x2a 
+> 6 + 36 
+> 49 - 7 
+> 6 * 7 
+> 126 / 3 
+> 601 % 43 
+> 43 * 13 + 42 
+> -601 % 43 
+> -601 % -43 
+> 12.002 ** 3 
+> 12.002 * 12.002 * 12.002 
+> -42 
+> +42 
+> -     42 
+> - +   42 
+> -+-42 
+> 42-+-42+-+42 
+> 42 - (+(-42)) + (-(+42)) 
+> --42 
+> - -42 
+> (0b1100 & 0b1010).toString(2) 
+> (0b1100 | 0b1010).toString(2) 
+> (0b1100 ^ 0b1010).toString(2).padStart(4, "0") 
+> 12 & 10 
+> (12).toString(2) 
+> (10).toString(2) 
+> (8).toString(2) 
+> ~5 
+> (0b111 << 3).toString(2) 
+> 0b111 
+> 0b111 << 1 
+> 0b111 << 2 
+> 0b111 << 3 
+> ~~0b0111_1111_1111_1111_1111_1111_1111_1111 
+> ~~0b0111_1111_1111_1111_1111_1111_1111_1111 << 1 
+> ~~0b1111_1111_1111_1111_1111_1111_1111_1110 
+> ~~0b1000_1111_1111_1111_1111_1111_1111_1111 
+> ~~0b1000_1111_1111_1111_1111_1111_1111_1111 << 1 
+> ~~0b0001_1111_1111_1111_1111_1111_1111_1110 
+> 0b1000_1111_1111_1111_1111_1111_1111_1111 
+> 0b0000_0000_0000_0000_0000_0000_0001_0000 
+> 0b0000_0000_0000_0000_0000_0000_0001_0000 >> 3 
+> 0b0000_0000_0000_0000_0000_0000_0000_0010 
+> ~~0b1111_1111_1111_1111_1111_1111_1110_0000 
+> ~~0b1111_1111_1111_1111_1111_1111_1110_0000 >> 3 
+> ~~0b1111_1111_1111_1111_1111_1111_1111_1100 
+> 17 >> 1 
+> 17 >> 2 
+> 17 >> 3 
+> -15 >> 1 
+> -15 >> 2 
+> -15 >> 3 
+> ~~0b1111_1111_1111_1111_1111_1111_1110_0000 
+> ~~0b1111_1111_1111_1111_1111_1111_1110_0000 >>> 3 
+> ~~0b0001_1111_1111_1111_1111_1111_1111_1100 
+> let sum = 13 
+> sum = sum + 14 
+> sum = sum + 15 
+> let prod = 2 
+> prod = prod * 3 
+> prod = prod * 7 
+> let sum = 13 
+> sum += 14 
+> sum += 15 
+> let prod = 2 
+> prod *= 3 
+> prod *= 7 
+> let count = 0 
+> ++count 
+> ++count 
+> --count 
+> count 
+> let count = 0 
+> count++ 
+> count++ 
+> count-- 
+> count 
+> let count1 = 0 
+> let result1 = ++count1 
+> count1 
+> result1 
+> let count2 = 0 
+> let result2 = count2++ 
+> count2 
+> result2 
+> let count1 = 0 
+> ++count1 
+> result1 = count1 
+> count1 
+> result1 
+> let count2 = 0 
+> result2 = count2 
+> count2++ 
+> count2 
+> result2 
+> 5*8 < 6*7 
+> 5*8 > 6*7 
+> 5*8 <= 6*7 
+> 5*8 >= 6*7 
+> let v = 1 
+> if (v => 3) { // この行が誤り 
+    console.log("ここには来ないはず") 
+  } else { 
+    console.log("ここに来るはず") 
+  } 
+> if (v >= 3) { // 修正 
+    console.log("ここには来ないはず") 
+  } else { 
+    console.log("ここに来るはず") 
+  } 
+> 1 + 2**3 * 4 % 5 - -6 
+> 1 + 2 * 3 
+> 1 + ((2**3) * 4 % 5) - (-6) 
+> 252 / 3 / 2 
+> (252 / 3) / 2 
+> 252 / (3 / 2) 
+> 2 ** 3 ** 2 
+> 2 ** (3 ** 2) 
+> (2 ** 3) ** 2 
+> 9007199254740991 + 1 
+> 9007199254740991 + 2 
+> 9007199254740991 + 1 == 9007199254740991 + 2 
+> 9007199254740991n + 1n 
+> 9007199254740991n + 2n 
+> 9007199254740991n + 1n == 9007199254740991n + 2n 
+> 6n + 36n 
+> 49n - 7n 
+> 6n * 7n 
+> 128n / 3n 
+> 601n % 43n 
+> 12n ** 3n 
+> -42n 
+> "In the beginning was the Spaghetti," 
+> 'and the Spaghetti was with God,' 
+> "and the Spaghetti was God.' 
+> 'I'm a teapot.' 
+> "I'm a teapot." 
+> "He said \"I'm a teapot.\"" 
+> "The apparition of these faces in the crowd:\nPetals on a wet, black bough" 
+> "The apparition of these faces in the crowd:\n" + 
+  "Petals on a wet, black bough" 
+> 123 + "ダー" 
+> "加藤" + 123 
+> "dreams come " + true 
+> "R'lyeh"[0] 
+> "R'lyeh"[1] 
+> "R'lyeh"[-1] 
+> "R'lyeh"[6] 
+> `Tsathoggua` 
+> `\`Thusa'` 
+> `安藤様 
+お世話になります、ABCDの山田と申します。 
+安藤様はデベロッパーとしてウェブアプリ開発のご経験をお持ちとお見受けし、表題企業の依頼によりお声がけいたしました。 
+` 
+> `安藤様\n\nお世話になります、ABCDの山田と申します。\n\n安藤様はデベロッパーとしてウェブアプリ開発のご経験をお持ちとお見受けし、表題企業の依頼によりお声がけいたしました。\n` 
+> const name = "Ando", reason = "GitHub" 
+> `${name}様 
+突然のメール失礼致します。${reason}からプロフィールを拝見してメールしております。` 
+> `3 + 6 + 9 + ... + 999 = ${333 * (3 + 999) / 2}` 
+> days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] 
+> [] 
+> pourelle = ["the next", 3, days] 
+> ["the next", 3, [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]] 
+> ["the next", 3, ...days] 
+> [..."the next"] 
+> [ 
+    "Lorem ipsum dolor sit amet", 
+    "consectetur adipiscing elit", 
+    "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua", 
+  ] 
+> ["an", , "bottle"] 
+> ["an", undefined, "bottle"] 
+> [,,] 
+> days 
+> days[0] 
+> days[1] 
+> days[-1] 
+> days[12] 
+> days 
+> feb = days[1], apr = days[3], jun = days[5] 
+> [jan, feb, mar] = days 
+> jan 
+> [feb, mar] 
+> [,feb,,apr,,jun] = days 
+> apr 
+> [feb, jun] 
+> [,,,,,, ...latterHalf] = days 
+> latterHalf 
+> [a=1, b=2, c=3, d=4] = [10, undefined, null] 
+> [a, b, c, d] 
+> let taki = "僕たち", mitsuha = "私たち" 
+> tmp = taki 
+> taki = mitsuha 
+> mitsuha = tmp 
+> let taki = "僕たち", mitsuha = "私たち" 
+> [taki, mitsuha] = [mitsuha, taki] 
+> taki 
+> mitsuha 
+> pourelle 
+> pourelle[0] = "The Next" 
+> pourelle 
+> pourelle[1] = "Three" 
+> pourelle 
+> pourelle[2][1] 
+> pourelle[2][1] = 29 
+> pourelle[2] 
+> pourelle[3] = 2008 
+> pourelle 
+> pourelle[6] = 2011 
+> pourelle 
+> parameters = { 
+    power: "B", speed: "C", range: "D", 
+    durability: "C", precision: "D", development: "C", 
+  } 
+> iggy = {id: 0, name: "The Fool", parameters: parameters} 
+> {id: 0, name: "The Fool", parameters} 
+> {id: 0, name: "The Fool", ...parameters} 
+> params = {"destructive power": "B", "development potential": "C"} 
+> {["加藤" + 123]: "9段"} 
+> iggy 
+> iggy.parameters.speed 
+> params 
+> params["destructive power"] 
+> iggy.params 
+> iggy.params.potential 
+> iggy && iggy.params && iggy.params.potential 
+> iggy.params?.potential 
+> iggy.params?.["potential"] 
+> ({power, development} = parameters) 
+> power 
+> development 
+> {power, development} = parameters 
+> let {power, development} = parameters 
+> ({power:p, development:d} = parameters) 
+> p 
+> d 
+> ({power="E", development="E", ability="the world"} = parameters) 
+> ability 
+> ({ability:a="the world"} = parameters) 
+> a 
+> ko1 = {id: 1, name: "Echoes", parameters: [ 
+    {power: "E", speed: "E", range: "B"}, // ACT1 
+    {power: "C", speed: "D", range: "B"}, // ACT2 
+    {power: "B", speed: "B", range: "C"}, // ACT3 
+  ]} 
+> ({name, parameters:[,{speed:speed2},{range:range3}]} = ko1) 
+> name 
+> speed2 
+> range3 
+> iggy.parameters.power = "スゴイ" 
+> iggy.parameters 
+> params["development potential"] = "人間と同じ" 
+> params 
+> "name" in iggy 
+> "power" in iggy 
+> delete iggy.name 
+> "name" in iggy 
+> param1 = {power: "E", speed: "E", range: "B"} 
+> param2 = {power: "E", speed: "E", range: "B"} 
+> param1 == param2 
+> param1 === param2 
+> param3 = param1 
+> param1 == param3 
+> param1 === param3 
+> days1 = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] 
+> days2 = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] 
+> days3 = days1 
+> days1 === days2 
+> days1 === days3 
+
+/*ch03*/
+> [a, b] = [7854, 2730] 
+> r = a % b 
+> [a, b] = [b, r] 
+> r = a % b 
+> [a, b] = [b, r] 
+> r = a % b 
+> [a, b] = [b, r] 
+> r = a % b 
+> b 
+> let pi = 3.14 
+> pi = 3.14 
+> pi = (let PI = 3.14) 
+> pi = (PI = 3.14) 
+> let a = 40 
+  let b = 2 
+  let c = a + b 
+> c 
+> let a = 40; 
+  let b = 2; 
+  let c = a + b; 
+> let a = 40; let b = 2; let c = a + b; 
+> { 
+    const pi = 3.14 
+    console.log(`ブロックの内側: ${pi}`) 
+  } 
+  console.log(`ブロックの外側: ${pi}`) 
+> const pi = 3.14 
+  { 
+    const pi = 3 
+  } 
+> const pi = 3.14 
+  const pi = 3 
+> a = 6, b = 7, c = a * 7 
+> let a = 6, let b = 7, let c = a * b 
+> if (true) 
+    console.log("true") 
+  else 
+    // false 
+> if (true) 
+    console.log("true") 
+  else 
+    // false 
+    ; 
+> if (false) 
+    if (false) 
+      console.log(1) 
+  else 
+    console.log(2) 
+> if (false) { 
+    if (false) 
+      console.log(1) 
+  } 
+  else { 
+    console.log(2) 
+  } 
+> switch (null) { 
+    case undefined: 
+      console.log("undefined") 
+      break 
+    case null: 
+      console.log("null") 
+  } 
+> switch (1) { 
+    case 1: 
+      console.log("1-1") 
+      break 
+    case 1: 
+      console.log("1-2") 
+  } 
+> switch (0) { 
+    case 1: 
+      console.log(1) 
+      break 
+    case 2: 
+      console.log(2) 
+      break 
+    default: 
+      console.log("default") 
+  } 
+> let pi = true ? 3.14 : 3 
+> pi 
+> let pi 
+  if (true) { 
+    pi = 3.14 
+  } 
+  else { 
+    pi = 3 
+  } 
+> pi 
+> val = 0 
+> val < 0 ? "負" : val > 0 ? "正" : "ゼロ" 
+> val < 0 ? "負" : (val > 0 ? "正" : "ゼロ") 
+> val < 0 ? "負" : 
+  val > 0 ? "正" : 
+            "ゼロ" 
+> for (let i = 0; i < 3; i++) console.log(i) 
+> for (let i = 0; i <= 3; i++) console.log(i) 
+> for (let i = 0; i < 3; i++) { 
+    const j = i * 2 
+    console.log(j) 
+  } 
+> let i = 0 
+> for (;;) { 
+    if (3 <= i) break 
+    console.log(i) 
+    i++ 
+  } 
+> outer: for (let i = 0; i < 3; i++) { 
+    innter: for (let j = 0; j < 3; j++) { 
+      console.log(`${i} * ${j} = ${i * j}`) 
+      if (i * j === 2) break outer 
+    } 
+  } 
+> outer: for (let i = 0; i < 3; i++) { 
+    innter: for (let j = 0; j < 3; j++) { 
+      console.log(`${i} * ${j} = ${i * j}`) 
+      if (i * j === 2) break 
+    } 
+  } 
+> days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] 
+> for (let i = 0; i < 3; i++) { 
+    console.log(days[i]) 
+  } 
+> for (const day of days) { 
+    console.log(day) 
+  } 
+> parameters = [ 
+    {power: "E", speed: "E", range: "B"}, 
+    {power: "C", speed: "D", range: "B"}, 
+    {power: "B", speed: "B", range: "C"}, 
+  ] 
+> for (const {speed} of parameters) { 
+    console.log(speed) 
+  } 
+> parameters = { 
+    power: "B", speed: "C", range: "D", 
+    durability: "C", precision: "D", development: "C", 
+  } 
+> for (const name in parameters) { 
+    console.log(`${name}: ${parameters[name]}`) 
+  } 
+> days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] 
+> for (const i in days) { 
+    console.log(`days[${i}] = ${days[i]}`) 
+  } 
+> while (false) console.log("実行されない") 
+> while (true) ; 
+> count = 3 
+> while (0 < count) console.log(count--) 
+> count = 3 
+> while (0 < count) { 
+    console.log(count) 
+    count-- 
+  } 
+> do 
+    console.log("実行") 
+  while (false) 
+> typeof console.log 
+> typeof console.log() 
+> function getPrimes(max) { 
+    let primes = "" 
+  outer: 
+    for (let i = 1; i < max; i++) { 
+      for (let divisor = i-1; 1 < divisor; divisor--) { 
+        if (i % divisor === 0) continue outer 
+      } 
+      primes += i + " " 
+    } 
+    return primes 
+  } 
+  getPrimes(10) 
+> function 次の数以下の素数を取得する(最大値) { 
+    let 素数リスト = "" 
+  外部ループ: 
+    for (let 素数候補 = 1; 素数候補 < 最大値; 素数候補++) { 
+      for (let 除数 = 素数候補-1; 1 < 除数; 除数--) { 
+        if (素数候補 % 除数 === 0) continue 外部ループ 
+      } 
+      素数リスト += 素数候補 + " " 
+    } 
+    return 素数リスト 
+  } 
+  次の数以下の素数を取得する(10) 
+> function getAverage(n1, n2, n3) { 
+    console.log(n1, n2, n3) 
+    return (n1 + n2 + n3) / 3 
+  } 
+  getAverage(3, 48, 75) 
+> getAverage(22, 62) 
+> function getAverage(n1, n2, n3=100) { 
+    console.log(n1, n2, n3) 
+    return (n1 + n2 + n3) / 3 
+  } 
+  getAverage(7, 19) 
+> getAverage(3, 48, 75, 108, 147, 192) 
+> function getAverage(n1, n2, n3, ...ns) { 
+    console.log(n1, n2, n3, ns) 
+    sum = n1 + n2 + n3 
+    for (n of ns) { 
+      sum += n 
+    } 
+    return sum / (ns.length + 3) 
+  } 
+  getAverage(22, 32, 42, 52, 62) 
+> function getAverage(...ns) { 
+    console.log(ns) 
+    sum = 0 
+    for (n of ns) { 
+      sum += n 
+    } 
+    return sum / ns.length 
+  } 
+  getAverage(22, 32, 42, 52, 62) 
+> function getAverage(n1, n2, ...ns, n3) {} 
+> function addVectors({x:x1, y:y1}, {x:x2, y:y2}) { 
+    return {x:(x1+x2)/2, y:(y1+y2)/2} 
+  } 
+  addVectors({x:1, y:1}, {x:7, y:3}) 
+> function getFactorial(num) { 
+    return num === 1 ? 1 : num * getFactorial(num - 1) 
+  } 
+  getFactorial(3) 
+> let addVs = addVectors 
+> addVs({x:1, y:1}, {x:7, y:3}) 
+> let getAverage = function(n1, n2, n3) { 
+    return (n1 + n2 + n3) / 3 
+  } 
+  getAverage(3, 48, 75) 
+> function map(ary, func) { 
+    for (let i in ary) { 
+      ary[i] = func(ary[i]) 
+    } 
+    return ary 
+  } 
+  map([1, 4, 5], function(n) { return n * n }) 
+> function double(n) { 
+    return n * n 
+  } 
+> map([1, 2, 3], double) 
+> function mul(m, n) { 
+    return m * n 
+  } 
+  function mulM(m) { 
+    return function(n) { 
+      return mul(m, n) 
+    } 
+  } 
+  mul6 = mulM(6) 
+  mul6(7) 
+> let fact = function(num) { 
+    return num === 1 ? 1 : num * fact(num - 1) 
+  } 
+  fact(3) 
+> let fact = (num) => { 
+    return num === 1 ? 1 : num * fact(num - 1) 
+  } 
+> let fact = num => num === 1 ? 1 : num * fact(num - 1) 
+> arrowFunc = ({a, b}, c=3, ...d) => console.log(a, b, c, d) 
+  arrowFunc({a:1, b:2}, undefined, 4, 5, 6) 
+> let bold = (strs, ...targets) => { 
+    let ret = strs[0] 
+    for (i = 1; i < 3; i++) { 
+      ret += `<b>${targets[i-1]}</b>${strs[i]}` 
+    } 
+    return ret 
+  } 
+> bold`The ${"world"} is ${"mine"}` 
+> console.log`The ${"world"} is ${"mine"}` 
+> const raw = (strs) => [[...strs], strs.raw] 
+> raw`the\tworld\tis\tmine` 
+> for (); 
+> Array(-1) 
+> notdefined 
+> "not a function"() 
+> decodeURI("\u0025\u1234") 
+> myError = Error("Love truth, but pardon error.") 
+> myError.message 
+> throw myError 
+> throw 42 
+> throw; 
+> try { 
+      console.log("実行される") 
+      throw Error("エラーが発生しました") 
+      console.log("実行されない") 
+  } catch (e) { 
+      console.log(`捕捉: ${e}`) 
+  } finally { 
+      console.log("後処理") 
+  } 
+> try { 
+    throw {power: "E", speed: "E", range: "B"} 
+  } catch({speed}) { 
+    console.log(speed) 
+  } 
+> try { 
+      throw Error("エラーが発生しました") 
+  } catch ({message}) { 
+      console.log(message) 
+  } 
+> try { 
+      throw Error("内容は無視") 
+  } catch { 
+      console.log("エラー発生") 
+  } 
+> try { 
+      throw Error("エラーが発生しました") 
+  } finally { 
+      console.log("後処理") 
+  } 
+> try { 
+    try { 
+      throw Error("エラー") 
+    } catch (e) { 
+      console.log(`内側:${e}`) 
+    } 
+  } catch (e) { 
+      console.log(`外側:${e}`) 
+  } 
+> try { 
+    try { 
+      throw Error("エラー") 
+    } catch (e) { 
+      console.log(`内側:${e}`) 
+      throw e 
+    } 
+  } catch (e) { 
+    console.log(`外側:${e}`) 
+  } 
+> const innerFunc = () => { 
+    try { 
+      throw Error("エラー") 
+    } catch (e) { 
+      console.log(`内側:${e}`) 
+      throw e 
+    } 
+  } 
+> const outerFunc = () => { 
+    try { 
+      innerFunc() 
+    } catch (e) { 
+      console.log(`外側:${e}`) 
+      throw e 
+    } 
+  } 
+> outerFunc() 
+
+/*ch04*/
+> let vector2 = { 
+    x:3, y:4, 
+    lengthSq:self => self.x * self.x + self.y * self.y, 
+    add:(self, other) => { 
+      self.x += other.x 
+      self.y += other.y 
+    } 
+  } 
+> vector2.lengthSq(vector2) 
+> const Vector2 = (x, y) => { 
+    return { 
+      x, y, 
+      lengthSq:self => self.x * self.x + self.y * self.y, 
+      add:(self, other) => { 
+        self.x += other.x 
+        self.y += other.y 
+      } 
+    } 
+  } 
+> vector2a = Vector2(20, 22) 
+> vector2b = Vector2(22, 20) 
+> vector2a.add(vector2a, vector2b) 
+> vector2a 
+> const Vector2_lengthSq = self => self.x * self.x + self.y * self.y 
+> const Vector2_add = (self, other) => { 
+    self.x += other.x 
+    self.y += other.y 
+  } 
+> const Vector2 = (x, y) => { 
+    return { x, y, lengthSq:Vector2_lengthSq, add:Vector2_add } 
+  } 
+> const Vector3_lengthSq = 
+    self => self.parent.lengthSq(self) + self.z * self.z 
+> const Vector3_add = (self, other) => { 
+    self.parent.add(self, other) 
+    self.z += other.z 
+  } 
+> const Vector3 = (x, y, z) => { 
+    let parent = Vector2(x, y) 
+    return { 
+      parent, 
+      ...parent, 
+      z, 
+      lengthSq: Vector3_lengthSq, 
+      add: Vector3_add 
+    } 
+  } 
+> vector3a = Vector3(1, 4, 5) 
+> vector3a.lengthSq(vector3a) 
+> vector3b = Vector3(41, 38, 37) 
+> vector3a.add(vector3a, vector3b) 
+> const Vector2_lengthSq = function() { 
+    return this.x * this.x + this.y * this.y 
+  } 
+> const Vector2 = (x, y) => { 
+    return { x:x, y:y, lengthSq:Vector2_lengthSq } 
+  } 
+> v2 = Vector2(3, 4) 
+> v2.lengthSq() 
+> Vector2_lengthSq() 
+> class Vector2 { 
+    constructor(x, y) { 
+      this.x = x 
+      this.y = y 
+    } 
+    lengthSq() { 
+      return this.x * this.x + this.y * this.y 
+    } 
+    add(that) { 
+      this.x += that.x 
+      this.y += that.y 
+    } 
+  } 
+> class Vector3 extends Vector2 { 
+    constructor(x, y, z) { 
+      super(x, y) 
+      this.z = z 
+    } 
+    lengthSq() { 
+      return super.lengthSq() + this.z * this.z 
+    } 
+    add(that) { 
+      super.add(that) 
+      this.z += that.z 
+    } 
+  } 
+> let v3a = new Vector3(1, 4, 5) 
+> v3a.lengthSq() 
+> let v3b = new Vector3(41, 38, 37) 
+> v3a.add(v3b) 
+> v3a 
+> class Vector2 { 
+    // ...これまでのメソッドは省略... 
+    get length() { 
+      return Math.sqrt(this.lengthSq()) // Math.sqrt()は二乗根を返す 
+    } 
+    set length(len) { 
+      const ratio = len / this.length 
+      this.x *= ratio 
+      this.y *= ratio 
+    } 
+  } 
+> vec = new Vector2(3,4) 
+> vec.length 
+> vec.length = 50 
+> vec 
+> class Vector2 { 
+    static instanceCount = 0 
+    static incrementCount() { 
+      this.instanceCount++ 
+    } 
+    constructor(x, y) { 
+      this.x = x 
+      this.y = y 
+      Vector2.incrementCount() 
+    } 
+  } 
+> new Vector2(1, 1) 
+> Vector2.instanceCount 
+> new Vector2(2, 2) 
+> Vector2.instanceCount 
+> const Vector2 = class { 
+    constructor(x, y) { 
+      this.x = x; 
+      this.y = y; 
+    } 
+  } 
+> vec2 = new Vector2(3, 4) 
+> const Vector3 = class extends Vector2 { 
+    constructor(x, y, z) { 
+      super(x, y) 
+      this.z = z 
+    } 
+  } 
+> vec3 = new Vector3(1, 4, 5) 
+> let tusk = { 
+    act1() { 
+      console.log("Chumimin") 
+    } 
+  } 
+> tusk.act1() 
+> let tusk = { 
+    cry: "Chumimin", 
+    act1() { 
+      console.log(this.cry) 
+    }, 
+    act2() { 
+      this.act1() 
+      console.log("Tail") 
+    } 
+  } 
+> tusk.act2() 
+> let tusk = { 
+    get cry() { return "Chumimin" }, 
+  } 
+> tusk.cry 
+> let tusk1 = { 
+    cry: "Chumimin", 
+    act1() { 
+      console.log(this.cry) 
+    } 
+  } 
+> let tusk2 = { 
+    __proto__: tusk1, 
+    act2() { 
+      super.act1() 
+      console.log("Tail") 
+    } 
+  } 
+> tusk2.cry 
+> tusk2.act1() 
+> tusk2.act2() 
+> Object.prototype.hasOwnProperty("hasOwnProperty") 
+> [].hasOwnProperty("0") 
+> [1].hasOwnProperty("0") 
+> a = [1] 
+> a.propertyIsEnumerable("0") 
+> a.propertyIsEnumerable("length") 
+> ({a:1, b:2}).toString() 
+> ({a:1, b:2}).toLocaleString() 
+> date = new Date(Date.UTC(2019, 0)) 
+> date.toString() 
+> date.toLocaleString("ja-JP", { timeZone: "UTC" }) 
+> date.toLocaleString("en-US", { timeZone: "UTC" }) 
+> Object() 
+> new Object() 
+> Object.fromEntries([["x", 3], ["y", 4]]) 
+> vec = Object.create(Object.prototype, { 
+    x: { 
+      value: 3, 
+      writable: true, 
+      enumerable: true, 
+    }, 
+    y: { 
+      value: 4, 
+      writable: true, 
+      enumerable: true, 
+    }, 
+    length: { 
+      enumerable: false, 
+      get: function () { 
+        return Math.sqrt(this.x * this.x + this.y * this.y) 
+      }, 
+      set: function (len) { 
+        const current = this.length 
+        this.x *= len / current 
+        this.y *= len / current 
+      } 
+    } 
+  }) 
+> vec.length 
+> vec.length = 50 
+> vec 
+> const checkStatus = (obj) => `拡張:${Object.isExtensible(obj)} 
+  凍結:${Object.isFrozen(obj)} 
+  封印:${Object.isSealed(obj)}` 
+> checkStatus({answer:42}) 
+> checkStatus(Object.preventExtensions({answer:42})) 
+> checkStatus(Object.seal({answer:42})) 
+> checkStatus(Object.freeze({answer:42})) 
+> let obj = {bro1:"Mycroft", bro2:"Sherlock", [Symbol("sys")]:"Eurus"} 
+> Object.getOwnPropertyNames(obj) 
+> Object.getOwnPropertySymbols(obj) 
+> Object.keys(obj) 
+> Object.values(obj) 
+> Object.entries(obj) 
+> clone = Object.fromEntries(Object.entries(obj)) 
+> let vec = {} 
+> Object.defineProperties(vec, { 
+    x: {value: 3, writable: true, enumerable: true, configurable: true}, 
+    y: {value: 4, writable: true, enumerable: true} 
+  }) 
+> Object.defineProperty(vec, "length", { 
+    enumerable: false, 
+    get: function () { 
+      return Math.sqrt(this.x * this.x + this.y * this.y) 
+    }, 
+    set: function (len) { 
+      const current = this.length 
+      this.x *= len / current 
+      this.y *= len / current 
+    } 
+  }) 
+> Object.getOwnPropertyDescriptors(vec) 
+> Object.getOwnPropertyDescriptor(vec, "length") 
+> Object.defineProperty( 
+    vec, "x", {value: 5, writable: true, enumerable: false}) 
+> Object.defineProperty( 
+    vec, "y", {value: 5, writable: true, enumerable: false}) 
+> Object.defineProperty( 
+    vec, "length", {value: 5, writable: true, enumerable: true}) 
+> vec.z = 1 
+> Object.getOwnPropertyDescriptor(vec, "z") 
+> let parameters = {power: "B", speed: "C"}, 
+      params1 = {range: "D"}, 
+      params2 = {durability: "C"} 
+> Object.assign(parameters, params1, params2) 
+> parameters 
+> let params3 = { 
+    [Symbol("precision")]: "D", 
+    get development() { return "C" } 
+  } 
+> Object.assign(parameters, params3) 
+> parameters 
+> Object.is(+0, -0) 
+> +0 === -0 
+> Object.is(NaN, NaN) 
+> NaN === NaN 
+> class Vector2 {} 
+> let vec = new Vector2() 
+> typeof vec 
+> vec instanceof Vector2 
+> vec instanceof Object 
+> vec instanceof Date 
+> Object.getPrototypeOf(vec) 
+
+/*ch06*/
+> 42n.toString() 
+> true.toString() 
+> Object(true) 
+> new Object(true) 
+> Object(42) 
+> new Object(42) 
+> Object(true).valueOf() 
+> Object(42).valueOf() 
+> Boolean(1) 
+> Boolean(0) 
+> Boolean(undefined) 
+> Boolean(null) 
+> Number(Object(42)) 
+> Number(true) 
+> Number(undefined) 
+> Number(null) 
+> Number("42") 
+> Number("4e2") 
+> Number("42n") 
+> falseObject = new Boolean(false) 
+> falseObject ? "true" : "false" 
+> new Number(42) 
+> +new Number(42) 
+> new Number(6) * new Number(7) 
+> Number.MAX_VALUE 
+> Number.MAX_VALUE + 100 
+> Number.MAX_VALUE + Number.MAX_VALUE 
+> Number.MIN_VALUE 
+> Number.MIN_VALUE/1.9 
+> Number.MIN_VALUE/2 
+> Number.MAX_SAFE_INTEGER 
+> Number.MIN_SAFE_INTEGER 
+> 2**53 - 1 
+> Number.MAX_SAFE_INTEGER + 1 
+> Number.MAX_SAFE_INTEGER + 2 
+> Number.MAX_SAFE_INTEGER + 3 
+> Number.MAX_SAFE_INTEGER + 4 
+> Number.isSafeInteger(42) 
+> Number.isSafeInteger(3.14) 
+> Number.isSafeInteger(Number.MAX_SAFE_INTEGER) 
+> Number.isSafeInteger(Number.MAX_SAFE_INTEGER + 1) 
+> Number.isInteger(1) 
+> Number.isInteger(0.1) 
+> Number.isInteger(Number.MAX_SAFE_INTEGER) 
+> Number.isInteger(Number.MAX_VALUE) 
+> Number.POSITIVE_INFINITY 
+> Number.NEGATIVE_INFINITY 
+> 10**10**10**122 
+> 1 / 0 
+> Infinity + Number.MAX_VALUE 
+> Infinity - Number.MAX_VALUE 
+> Infinity * Number.MAX_VALUE 
+> Infinity / Number.MAX_VALUE 
+> Infinity === Infinity 
+> Number.POSITIVE_INFINITY === Infinity 
+> Number.isFinite(Infinity) 
+> 0 / 0 
+> Number.NaN 
+> Infinity / Infinity 
+> Infinity - Infinity 
+> Infinity * 0 
+> Number.isNaN(0/0) 
+> NaN === NaN 
+> NaN == NaN 
+> NaN == 0 
+> Number.parseFloat("0.123") 
+> Number.parseFloat("10e-4") 
+> Number.parseFloat("   -1.2です") 
+> Number.parseFloat(true) 
+> Number.parseInt("1") 
+> Number.parseInt("1.23") 
+> Number.parseInt("10e3") 
+> Number.parseInt("11", 2) 
+> Number.parseInt("hello", 36) 
+> Number.parseInt("11", 100) 
+> Number.parseInt("0b11") 
+> Number.parseInt("011") 
+> Number.parseInt("0xff") 
+> (42).toString() 
+> (42).toString(2) 
+> 9.80665.toString(16) 
+> 9.80665.toString(25) 
+> 42.toString() 
+> 42..toString() 
+> (101325).toLocaleString("en") 
+> (101325).toLocaleString("de") 
+> (101325).toLocaleString("ja-JP-u-nu-hanidec",  
+    { style: "currency", currency: "JPY" }) 
+> (42).toFixed(3) 
+> (42).toExponential(4) 
+> (42).toPrecision(5) 
+> (42).toPrecision(1) 
+> Math.sin(30/180 * Math.PI) 
+> Math.acos(1) 
+> Math.sqrt(1764) 
+> Math.pow(10, 10) 
+> Math.round(9.80665) 
+> Math.max(Math.PI, Math.E, 1) 
+> BigInt(6.02214179e23) 
+> BigInt("0x7f8618974d08a8000000") 
+> BigInt(true) 
+> new BigInt(42) 
+> BigInt.asUintN(3, 7n) 
+> BigInt.asUintN(3, 8n) 
+> BigInt.asIntN(3, 2n) 
+> BigInt.asIntN(3, 3n) 
+> BigInt.asIntN(3, 4n) 
+> BigInt.asIntN(3, 5n) 
+> const isbn = "9784873117706" 
+> isbn.charAt(3) 
+> isbn.charAt() 
+> isbn.charAt(-1) 
+> isbn.charAt(42) 
+> const nirvana = "𪘂歯類が𣵀槃で待つ" 
+> nirvana.charAt(0) 
+> nirvana.charAt(1) 
+> nirvana.charAt(2) 
+> nirvana.charAt(3) 
+> isbn 
+> isbn.slice(0, 3) 
+> isbn.slice(5, 10) 
+> isbn.slice(10) 
+> isbn.slice(10, 100) 
+> isbn.slice(10, 5) 
+> nirvana 
+> nirvana.slice(0, 4) 
+> nirvana.slice(1, 4) 
+> nirvana.slice(1, 6) 
+> isbn 
+> isbn.slice(-10, -8) 
+> isbn.slice(13-10, 13-8) 
+> isbn.slice(3, 5) 
+> isbn 
+> isbn.length 
+> nirvana 
+> nirvana.length 
+> isbn 
+> isbn.startsWith("978") 
+> isbn.startsWith("979") 
+> isbn 
+> isbn.startsWith("48", 3) 
+> isbn 
+> isbn.endsWith("706") 
+> isbn.endsWith("73117", 10) 
+> isbn 
+> isbn.includes("48") 
+> isbn.includes("48", 5) 
+> isbn 
+> isbn.indexOf("48") 
+> isbn.indexOf("42") 
+> isbn 
+> isbn.indexOf("7") 
+> isbn.indexOf("7", 1+1) 
+> isbn.indexOf("7", 5+1) 
+> isbn.indexOf("7", 9+1) 
+> isbn.indexOf("7", 10+1) 
+> isbn 
+> isbn.lastIndexOf("7") 
+> isbn 
+> isbn.replace("7", "*") 
+> isbn 
+> isbn.replace(/7/g, "*") 
+> "   9784873117706\n".trim() 
+> isbn 
+> isbn.padStart(15) 
+> isbn.padEnd(15) 
+> isbn 
+> isbn.padStart(10) 
+> isbn 
+> isbn.padStart(18, "#") 
+> isbn.padEnd(18, ".oO") 
+> isbn 
+> isbn.repeat(3) 
+> "lisp".toUpperCase() 
+> "PYTHON".toLowerCase() 
+> "ぁぃぅぇぉ".toUpperCase() 
+> "012-3456-7890".split("-") 
+> "012-3456-7890".split("-", 2) 
+> "012".concat("-", "3456", "-", "7890") 
+> "\u{2a602}\u{6b6f}\u{985e}" 
+> "\ud869\ude02\u6b6f\u985e" 
+> String.fromCodePoint(0x2a602, 0x6b6f, 0x985e) 
+> String.fromCharCode(0xd869, 0xde02, 0x6b6f, 0x985e) 
+> "\u{2a602}\u{6b6f}\u{985e}".codePointAt(0).toString(16) 
+> "\ud869\ude02\u6b6f\u985e".codePointAt(0).toString(16) 
+> "\u{2a602}\u{6b6f}\u{985e}".charCodeAt(0).toString(16) 
+> "\ud869\ude02\u6b6f\u985e".charCodeAt(0).toString(16) 
+> const s1 = Symbol() 
+> const s2 = Symbol() 
+> s1 == s2 
+> const s1 = Symbol("desc") 
+> const s2 = Symbol("desc") 
+> s1 == s2 
+> new Symbol() 
+> range = Symbol("range") 
+> theFool = {} 
+> theFool[range] = "D" 
+> theFool[range] 
+> theFool[Symbol("range")] 
+> power = Symbol("power") 
+> theFool = {[power]: "B"} 
+> theFool[power] 
+> speed = Symbol.for("speed") 
+> speed === Symbol.for("speed") 
+> speed === Symbol("speed") 
+> Symbol.keyFor(speed) 
+> Symbol.keyFor(power) 
+> Symbol.iterator 
+> Symbol.toStringTag 
+> let Suit = { 
+    [Symbol.hasInstance]:  
+      v => ["spade", "club", "heart", "diamond"].includes(v) 
+  } 
+> "spade" instanceof Suit 
+> "kimono" instanceof Suit 
+> let bat = { 
+    [Symbol.toPrimitive]: 
+      hint => ({default:0, number:42, string:"str"})[hint] 
+  } 
+> "" + bat 
+> +bat 
+> `${bat}` 
+> ({}).toString() 
+> new Map().toString() 
+> emporio = { 
+    [Symbol.toStringTag]: "I'm Emporio" 
+  } 
+> emporio.toString() 
+> function whatILikeDoingBest() {} 
+> whatILikeDoingBest instanceof Function 
+> (() => {}) instanceof Function 
+> let getAverage = new Function("n1", "n2", "n3", "return (n1 + n2 + n3) / 3") 
+> getAverage(3, 48, 75) 
+> function add3(num1, num2) { return this + num1 + num2 } 
+> add3.apply(1, [16, 25]) 
+> add3.call(1, 16, 25) 
+> add2 = add3.bind(1) 
+> add2(16, 25) 
+> add2.call(999, 16, 25) 
+> add1 = add3.bind(1, 16) 
+> add1(25) 
+> add1.call(999, 25) 
+> shout = /URY+/ 
+> shout 
+> match = "URYYY".match(shout) 
+> match = "8 seconds! URYYY".match(shout) 
+> match = "WRYYY".match(shout) 
+> shout 
+> match = "UR".match(shout) 
+> match = "URY".match(shout) 
+> shout 
+> "UR".match(/URY?/) 
+> "URY".match(/URY?/) 
+> "URYY".match(/URY?/) 
+> "UR".match(/URY*/) 
+> "URY".match(/URY*/) 
+> "URYYYY".match(/URY*/) 
+> shout = /URY+|WRY+/ 
+> match = "URYYY".match(shout) 
+> match = "WRYYY".match(shout) 
+> shout = /URY+|UREY+|WRY+/ 
+> match = "UREYYY".match(shout) 
+> shout = /(U|W)RE?Y+/ 
+> match = "URYYY".match(shout) 
+> match = "WRYYY".match(shout) 
+> match = "WREYYY".match(shout) 
+> "(U|W)RE?Y+".match(/(U|W)RE?Y+/) 
+> "(U|W)RE?Y+".match(/\(U\|W\)RE\?Y\+/) 
+> "I'm done with mankind, JOJO!".match(/\s\w+[!?]/) 
+> "I'm done with mankind, JOJO!".match(/^\S+/) 
+> "I'm done with mankind, JOJO!".match(/\S+$/) 
+> `Uryyyy 
+  Wreyyy UREYYYY 
+  WRYYYY`.match(/^(u|w)re?y+/gim) 
+> "URYYY".search(/(U|W)RE?Y+/) 
+> "UR".search(/(U|W)RE?Y+/) 
+> `What did 
+  you say 
+  about my 
+  hair?!`.split(/\s/) 
+> "I reject my humanity! JOJO!!".replace(/!+/g, "?") 
+> const length = { 
+    [Symbol.search]: s => s.length 
+  } 
+> "Wryyyyy".search(length) 
+> shout 
+> shout[Symbol.match] 
+> shout[Symbol.match]("WRYYY") 
+> new RegExp("(u|w)re?y+", "i") 
+> new RegExp("\\d+") 
+> new RegExp("\d+") 
+> re = new RegExp("\\\\") 
+> "\\".match(re) 
+> shout 
+> shout.test("WREYYYY") 
+> shout.exec("URYYYY") 
+> globalThis.Number 
+> globalThis.Number === Number 
+> globalThis.Infinity 
+> globalThis.Infinity === Infinity 
+> globalThis 
+> globalThis === window 
+
+/*ch07*/
+> days = Array.of(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31) 
+> pourelle = Array.of("the next", 3, days) 
+> days2 = Array.from(days) 
+> days == days2 
+> Array.from(new Set(days)) 
+> Array.from(days, i => i * i) 
+> Array.from(days, function(i) { return this + i }, "No.") 
+> Array.from(days, i => this + i, "No.") 
+> new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31) 
+> new Array(31) 
+> arrayLike = { 
+    length:3, 
+    0: 3, 
+    1: 5, 
+    2: 8 
+  } 
+> Array.from(arrayLike) 
+> Array.prototype.reverse.call(arrayLike) 
+> Array.isArray([]) 
+> Array.isArray([1, 1, 2, 3, 5, 8]) 
+> Array.isArray("array") 
+> Array.isArray(new Set) 
+> [].length 
+> [1, 1, 2, 3, 5, 8].length 
+> undefineds = [undefined, undefined, undefined] 
+> undefineds.length 
+> undefineds[0] 
+> undefineds[10] 
+> fib = [1, 1, 2, 3, 5, 8] 
+> fib.length = 3 
+> fib 
+> fib.length = 0 
+> fib 
+> fib.length = 3 
+> fib 
+> fib 
+> fib.includes(3) 
+> fib.includes(13) 
+> fib.includes("3") 
+> [NaN].includes(NaN) 
+> [+0].includes(-0) 
+> fib 
+> fib.includes(3, 1) 
+> fib.includes(3, 4) 
+> fib.includes(3, -4) 
+> fib 
+> fib.some(n => 4 < n) 
+> fib.some(n => 13 < n) 
+> fib 
+> fib.every(n => 0 < n) 
+> fib.every(n => 2 < n) 
+> fib 
+> fib.indexOf(1) 
+> fib.lastIndexOf(1) 
+> fib.findIndex(n => 4 < n) 
+> fib.find(n => 4 < n) 
+> fib.filter(n => 4 < n) 
+> fib.indexOf(13) 
+> fib.find(n => 13 < n) 
+> fib.filter(n => 13 < n) 
+> fib 
+> fib.find((n, i, ary) => n == i) 
+> fib.filter((n, i, ary) => n == i) 
+> fib 
+> fib.reverse() 
+> fib 
+> [34, 21, 13, 8, 5, 3, 2, 1, 1].sort() 
+> [34, 21, 13, 8, 5, 3, 2, 1, 1].sort((a, b) => { 
+      if (a < b) return -1; 
+      if (a > b) return 1; 
+      return 0; 
+  }) 
+> [34, 21, 13, 8, 5, 3, 2, 1, 1].sort((a, b) => a - b) 
+> fib 
+> fib.forEach(n => console.log(n)) 
+> for (const [i, n] of fib.entries()) { 
+    console.log(`index:${i} value:${n}`) 
+  } 
+> for (const i of fib.keys()) { 
+    console.log(`index:${i}`) 
+  } 
+> for (const i in fib) { 
+    console.log(`index:${i}`) 
+  } 
+> [1, 1, 2, 3, 5, 8].fill(0) 
+> [1, 1, 2, 3, 5, 8].fill(0, 2) 
+> [1, 1, 2, 3, 5, 8].fill(0, 2, 5) 
+> [1, 1, 2, 3, 5, 8].fill(0, -4) 
+> [1, 1, 2, 3, 5, 8].fill(0, -4, -2) 
+> new Array(5).fill("無駄") 
+> [1, 2, 3, 4, 5].copyWithin(2) 
+> [1, 2, 3, 4, 5].copyWithin(2, 1) 
+> [1, 2, 3, 4, 5].copyWithin(2, 1, 3) 
+> [1, 2, 3, 4, 5].copyWithin(2, -4) 
+> [1, 2, 3, 4, 5].copyWithin(2, -4, -2) 
+> ary = [1, 2, 3, 4, 5] 
+> ary.splice(1, 3) 
+> ary 
+> ary.splice(1, 0, 2, 3, 4) 
+> ary 
+> ary.splice(1, 3, -1, -2, -3) 
+> ary 
+> fib 
+> fib.map(n => n * n) 
+> fib 
+> fib.map((n, i, ary) => `${i}:${n * n}`) 
+> fib 
+> ary = [1, 2, 3, 4, 5] 
+> ary.slice(2, 4) 
+> ary.slice(2) 
+> ary.slice(-3) 
+> let src = [1, 2, 3, [4, 5]] 
+  let dst = src.slice() 
+  dst[1] = -2 
+  dst[3][0] = -4 
+> dst 
+> src 
+> [[1, 1], [2, [3, 5], 8]].flat() 
+> [[1, 1], [2, [3, 5], 8]].flat(2) 
+> [[1, 1], [2, 3], [5, 8]].flatMap(([n1, n2]) => n1 + n2) 
+> [1, 2, 3, 4, 5].reduce((sum, n) => sum += n, 0) 
+> [1, 2, 3, 4, 5].reduce((sum, n) => sum += n) 
+> [1, 2, 3, 4, 5].reduceRight((sum, n) => sum += n, "") 
+> [1, 2, 3, 4, 5].reduce((sum, n) => sum += n, "") 
+> ary = [1, 2, 3] 
+> ary.concat(4, 5, 6) 
+> ary 
+> ary.concat([4, 5, 6]) 
+> ary.concat(4, [5, 6], 7) 
+> ary.concat([4, [5, 6]]) 
+> ary.join() 
+> ary.join("-") 
+> ary.join("") 
+> stack = [1, 2, 3, 4, 5] 
+> item = stack.pop() 
+> stack 
+> stack.push(6) 
+> stack 
+> stack.push(7, 8, 9) 
+> stack 
+> queue = [1, 2, 3, 4, 5] 
+> item = queue.shift() 
+> queue 
+> queue.push(6) 
+> queue 
+> new Uint8Array([-1, 256]) 
+> new Uint8ClampedArray([-1, 256]) 
+> i8 = Int8Array.from([1, 2, 3, 4]) 
+> i82 = i8.filter(i => i % 2 == 0) 
+> i82.every(i => i % 2 == 0) 
+> f32 = Float32Array.of(1, 2, 3, 4) 
+> f32.map(f => f * f).reduce((s, f) => s + f) 
+> i8 = Int8Array.of(0, 0, 0, 0, 0) 
+> i8.set([1, 2]) 
+> i8 
+> i8.set([4, 5], 3) 
+> i8 
+> i8.set([3, 4, 5, 6], 2) 
+> i8.subarray(2) 
+> i8.subarray(1, 4) 
+> i8.subarray(1, -1) 
+> map = new Map() 
+> map.set(1, "number") 
+> map.set("1", "string") 
+> map.get(1) 
+> map.get("1") 
+> obj = {} 
+> obj[1] = "number" 
+> obj["1"] = "string" 
+> obj[1] 
+> obj["1"] 
+> map = new Map([[1, "number"], ["1", "string"]]) 
+> new Map([[1, "number"], [1, "string"]]) 
+> new Map([[1, 2, 3]]) 
+> new Map([[1]]) 
+> new Map([[]]) 
+> new Map([]) 
+> new Map(map) 
+> new Map(1) 
+> new Map([1]) 
+> new Map().size 
+> new Map([[1, 1], [2, 4], [3, 9]]).size 
+> map = new Map() 
+> map.set(true, "真偽値") 
+> map.set(null, "Null値").set(undefined, "未定義値") 
+> obj = {} 
+> map.set(obj, "オブジェクト") 
+> f = () => {} 
+> map.set(f, "関数") 
+> map.get(true) 
+> map.get(null) 
+> map.get(undefined) 
+> map.get(obj) 
+> map.get(f) 
+> map.get({}) 
+> map.get(() => {}) 
+> map = new Map() 
+> map.set("key", "Mapの値") 
+> map.key = "オブジェクトのプロパティ" 
+> map.get("key") 
+> map.key 
+> map.has(true) 
+> map.has("true") 
+> map = new Map([["未定義", undefined]]) 
+> map.get("未定義") !== undefined 
+> map.has("未定義") 
+> map.delete("未定義") 
+> map.has("未定義") 
+> map.delete("未定義") 
+> map = new Map([["key1", 1], ["key2", 2], ["key3", 3]]) 
+> map.size 
+> map.clear() 
+> map.size 
+> m 
+> map = new Map([["key1", 1], ["key2", 2]]) 
+> map.set("key3", 3) 
+> map.set("key4", 4) 
+> for (let [k, v] of map) { console.log(`キー:${k} 値:${v}`) } 
+> map.forEach((v, k) => console.log(`キー:${k} 値:${v}`)) 
+> for (e of map.entries()) { console.log(e) } 
+> for (e of map.keys()) { console.log(e) } 
+> for (e of map.values()) { console.log(e) } 
+> new Set() 
+> new Set([1, "a", true]) 
+> new Set([1, 2, 1, 2, 1, 2]) 
+> new Set([1, "a", true]).size 
+> new Set([1, 2, 1, 2, 1, 2]).size 
+> set = new Set() 
+> set.add(0) 
+> set.add("1").add(true) 
+> set.add("1") 
+> obj = {} 
+> set = new Set([obj]) 
+> set.add(obj) 
+> set.add({}) 
+> set.add(1) 
+> set.has(1) 
+> set.has(obj) 
+> set.has({}) 
+> set 
+> set.delete(1) 
+> set 
+> set.delete(1) 
+> set.clear() 
+> set 
+> set = new Set(["a", "b"]) 
+> set.add("c") 
+> for (let c of set) { console.log(c) } 
+> set.forEach(c => console.log(c)) 
+> for (let c of set.values()) { console.log(c) } 
+> for (let c of set.keys()) { console.log(c) } 
+> for (let cs of set.entries()) { console.log(cs) } 
+> obj1 = {}, obj2 = {}, obj3 = {} 
+> wm = new WeakMap([[obj1, "obj1"], [obj2, "obj2"]]) 
+> wm.set(obj3, "obj3") 
+> wm.get(obj2) 
+> wm.has(obj1) 
+> wm.delete(obj1) 
+> wm.has(obj1) 
+> wm.set(1, "not reference") 
+> obj1 = {}, obj2 = {}, obj3 = {} 
+> ws = new WeakSet([obj1, obj2]) 
+> ws.add(obj3) 
+> ws.has(obj1) 
+> ws.delete(obj1) 
+> ws.has(obj1) 
+> ws.add(1) 
+> [].entries() 
+> new Map().keys() 
+> new Set().values() 
+> iter = ["a", "b", "c"].values() 
+> iter.next() 
+> iter.next() 
+> iter.next() 
+> iter.next() 
+> iter.next() 
+> iter = makeFizzBuzzIterator(7) 
+> iter.next() 
+> iter.next() 
+> iter.next() 
+> iter.next() 
+> iter.next() 
+> iter.next() 
+> iter.next() 
+> for (let v of iter) { console.log(v) } 
+> obj = [..."abc"] 
+> for (let item of obj) { 
+    console.log(item) 
+  } 
+> for ( 
+    let iter = obj[Symbol.iterator](), rslt = iter.next(), item = rslt.value; 
+    !rslt.done; 
+    rslt = iter.next(), item = rslt.value 
+  ) { 
+    console.log(item) 
+  } 
+> [][Symbol.iterator]() 
+> new Map()[Symbol.iterator]() 
+> new Set()[Symbol.iterator]() 
+> ""[Symbol.iterator]() 
+> entriesIter = [].entries() 
+> entriesIter[Symbol.iterator]() === entriesIter 
+> function makeFizzBuzzIterable(max) { 
+    return { 
+      [Symbol.iterator]() { 
+        return makeFizzBuzzIterator(max) 
+      } 
+    } 
+  } 
+> for (item of makeFizzBuzzIterable(7)) { console.log(item) } 
+> function* generatorFunc() { 
+    return "1200kVA" 
+  } 
+> generator = generatorFunc() 
+> generator.next() 
+> generator[Symbol.iterator]() 
+> function* generatorFunc() { 
+    console.log("処理1") 
+    yield 1 
+    console.log("処理2") 
+    yield 2 
+    console.log("処理3") 
+    yield 3 
+    console.log("処理4") 
+    return 
+  } 
+> generator = generatorFunc() 
+> generator.next() 
+> generator.next() 
+> generator.next() 
+> generator.next() 
+> generator = generatorFunc() 
+> for (let item of generator) { 
+    console.log(item) 
+  } 
+> function* makeFizzBuzzGenerator(max) { 
+    for (let count = 1; count <= max; count++) { 
+      if (count % 6 === 0) { 
+        yield "FizzBuzz" 
+      } else if (count % 2 === 0) { 
+        yield "Fizz" 
+      } else if (count % 3 === 0) { 
+        yield "Buzz" 
+      } else { 
+        yield count 
+      } 
+    } 
+  } 
+> fizzBuzzGenerator = makeFizzBuzzGenerator(7) 
+> for (let item of fizzBuzzGenerator) { 
+    console.log(item) 
+  } 
+> let generatorExp = function*() { 
+    yield 1 
+    yield 2 
+  } 
+> for (let item of generatorExp()) { 
+    console.log(item) 
+  } 
+> obj = { 
+    *generatorMethod() { 
+      yield 1 
+      yield 2 
+    } 
+  } 
+> for (item of obj.generatorMethod()) { 
+    console.log(item) 
+  } 
+> function* generatorFunc() { 
+    console.log(yield 1) 
+  } 
+> generator = generatorFunc() 
+> generator.next(100) 
+> generator.next(200) 
+> function* generatorFunc() { 
+    yield 1 
+    yield 2 
+    yield 3 
+  } 
+> generator = generatorFunc() 
+> generator.next() 
+> generator.return(100) 
+> generator.next() 
+> function* generatorFunc() { 
+    try { 
+      yield 1 
+      yield 2 
+      yield 3 
+    } catch(e) { 
+      console.log(e) 
+      yield 4 
+    } 
+  } 
+> generator = generatorFunc() 
+> generator.next() 
+> generator.throw("エラー") 
+> generator.throw("エラー") 
+
+/*ch08*/
+> new ArrayBuffer(8) 
+> new ArrayBuffer() 
+> new ArrayBuffer(8.9) 
+> new ArrayBuffer(-1) 
+> ab = new ArrayBuffer(8) 
+> ab.byteLength 
+> ab = new Int8Array([0, 1, 2, 3, 4]).buffer 
+> ab.slice(1, 4) 
+> ab = new ArrayBuffer(4) 
+> i8 = new Int8Array(ab) 
+> i8[0] = 1 
+> i8[1] = 3 
+> i8[2] = 7 
+> i8[3] = 15 
+> i8 
+> i16 = new Int16Array(ab) 
+> i16[0] 
+> i16[1] 
+> 0b00000001_00000011 
+> 0b00000111_00001111 
+> 0b00000011_00000001 
+> 0b00001111_00000111 
+> i32 = new Int32Array(ab) 
+> i32[0] 
+> 0b00001111_00000111_00000011_00000001 
+> i8 
+> new Int8Array(ab, 1, 2) 
+> new Int8Array(ab, 1) 
+> new Int16Array(ab, 1) 
+> new Int16Array(ab, 2, 1) 
+> Int16Array.BYTES_PER_ELEMENT 
+> Int32Array.BYTES_PER_ELEMENT 
+> new Int16Array(ab, 1 * Int16Array.BYTES_PER_ELEMENT, 1) 
+> new Int32Array(new ArrayBuffer(7)) 
+> new Int32Array(new ArrayBuffer(8)) 
+> f64 = new Float64Array(3) 
+> i32 = new Int32Array([1, 1, 2, 3, 5]) 
+> f64.buffer 
+> i32.buffer 
+> i32.buffer = new ArrayBuffer() 
+> i32.buffer 
+> ab = new Int8Array([1, 3, 7, 15, 31]).buffer 
+> new DataView(ab) 
+> new DataView(ab, 1) 
+> new DataView(ab, 1, 3) 
+> ab = new ArrayBuffer(4) 
+> dv = new DataView(ab) 
+> dv.setInt8(0, 1) 
+> dv.setInt8(1, 3) 
+> dv.setInt8(2, 7) 
+> dv.setInt8(3, 15) 
+> dv.getInt8(0).toString(2).padStart(8, "0") 
+> dv.getInt8(1).toString(2).padStart(8, "0") 
+> dv.getInt16(0).toString(2).padStart(16, "0") 
+> dv.getInt16(0, true).toString(2).padStart(16, "0") 
+> dv.getInt16(1).toString(2).padStart(16, "0") 
+> dv.getInt16(2).toString(2).padStart(16, "0") 
+> dv.getInt32(0).toString(2).padStart(32, "0") 
+> dv.getInt32(0, true).toString(2).padStart(32, "0") 
+> dv.getInt32(1) 
+> JSON.parse("true") 
+> ary = JSON.parse("[1, 1, [2, 3], 5]") 
+> ary[2][1] 
+> obj = JSON.parse('{"id":1, "name":"Echoes", "power":["E", "C", "B"]}') 
+> obj.power[1] 
+> JSON.parse("40") + JSON.parse("2") 
+> JSON.parse(`{"k":'v'}`) 
+> let reviver = (k, v) => { 
+    console.log(`キー:${k} 値:${v}`) 
+    return v instanceof Object ? v : `updated:${v}` 
+  } 
+> JSON.parse('{"id":1, "name":"Echoes", "power":["E", "C", "B"]}', reviver) 
+> JSON.parse(42, reviver) 
+> let reviver = (k, v) => Array.isArray(v) ? undefined : v 
+> JSON.parse('{"id":1, "name":"Echoes", "power": ["E", "C", "B"]}', reviver) 
+> obj = {id: 1, name: "Echoes", power: ["E", "C", "B"]} 
+> JSON.stringify(obj) 
+> JSON.stringify(true) 
+> JSON.stringify(42.0) 
+> JSON.stringify('WRYYY') 
+> JSON.stringify(new Boolean(true)) 
+> JSON.stringify(new Number(42)) 
+> JSON.stringify(new String("WRYYY")) 
+> JSON.stringify(Symbol.iterator) 
+> JSON.stringify(undefined) 
+> params = Object.create(null, { 
+    power: {value:"B", enumerable:true}, 
+    speed: {value:"C", enumerable:false}, 
+    [Symbol("range")]: {value:"D", enumerable:true} 
+  }) 
+> JSON.stringify(params) 
+> params = {power:"B", speed:"C", range:"D", toJSON() { return "secret"}} 
+> JSON.stringify(params) 
+> let replacer = (k, v) => Array.isArray(v) ? v[0] : v 
+> JSON.stringify({id:1, name:"Echoes", power:["E", "C", "B"]}, replacer) 
+> range = Symbol("range") 
+> params = Object.create(null, { 
+    power: {value:"B", enumerable:true}, 
+    speed: {value:"C", enumerable:false}, 
+    [range]: {value:"D", enumerable:true} 
+  }) 
+> JSON.stringify(params, ["speed", range]) 
+> JSON.stringify( 
+    {id:1, name:"Echoes", power:["E", "C", "B"]}, undefined, 3) 
+> JSON.stringify( 
+    {id:1, name:"Echoes", power:["E", "C", "B"]}, undefined, "  ") 
+> JSON.stringify( 
+    {id:1, name:"Echoes", power:["E", "C", "B"]}, undefined, "[indent]") 
+> let ko1 = {id:1, name:"Echoes", parameters:[ 
+    {power:"E", speed:"E", range:"B"}, 
+    {power:"C", speed:"D", range:"B"}, 
+    {power:"B", speed:"B", range:"C"}, 
+  ]} 
+> let ko2 = JSON.parse(JSON.stringify(ko1)) 
+> ko2 
+> ko2.parameters[0].power = "A" 
+> ko1.parameters[0].power 
+
+/*ch09*/
+> new Date() 
+> new Date(1868, 3, 4) 
+> new Date(20, 8, 27) 
+> new Date(0) 
+> new Date("1985-04-16T00:00:00+02:00") 
+> Date.now() 
+> new Date(Date.UTC(1920, 8, 27)) 
+> date = new Date(2020, 2) 
+> date.setDate(32); date 
+> date.setDate(0); date 
+> date = new Date(1920, 8, 27) 
+> `${date.getFullYear()}年${date.getMonth()+1}年${date.getDate()}日` 
+> date = new Date(1920, 8, 27) 
+> new Intl.DateTimeFormat("ja").format(date) 
+> new Intl.DateTimeFormat("en-US").format(date) 
+> new Intl.DateTimeFormat("en-GB").format(date) 
+> new Intl.DateTimeFormat(["JP", "en-GB"]).format(date) 
+> new Intl.DateTimeFormat(["ja-US", "en-GB"]).format(d) 
+> let options =  {year:"numeric", month:"numeric", day:"numeric", 
+                  hour:"numeric", minute:"numeric"} 
+> new Intl.DateTimeFormat("ja", options).format(date) 
+> new Intl.DateTimeFormat("ja-JP-u-ca-japanese").format(new Date) 
+> new Intl.DateTimeFormat("ja-JP-u-ca-japanese", {era:"long"}).format(new Date) 
+> let options = {year:"numeric", month:"long", day:"numeric"} 
+  new Intl.DateTimeFormat("ja-JP-u-ca-japanese", options).format(new Date) 
+> new Intl.NumberFormat("en-US").format(1836.15) 
+> new Intl.NumberFormat("de-DE").format(1836.15) 
+> new Intl.NumberFormat(["JP", "de-DE"]).format(1836.15) 
+> new Intl.NumberFormat("ja-JP-u-nu-hanidec").format(1836.15) 
+> new Intl.NumberFormat("ja-JP", 
+    {minimumIntegerDigits:10, useGrouping:false}).format(1836.15) 
+> new Intl.NumberFormat("ja-JP", 
+    {minimumIntegerDigits:5, minimumFractionDigits:5}).format(1836.15) 
+> new Intl.NumberFormat("en-US",  
+    {style:"currency", currency:"USD"}).format(1836.153) 
+> new Intl.NumberFormat("ja-JP", 
+    {style:"currency", currency:"JPY"}).format(1836.153) 
+> new Intl.NumberFormat("de-DE",  
+    {style:"currency", currency:"JPY"}).format(1836.153) 
+> new Intl.NumberFormat("ja-JP", 
+    {style:"currency", currency:"JPY", currencyDisplay:"name"}).format(1836.153) 
+> german = new Intl.Collator("de") 
+> german.compare("z", "ö") 
+> ["z", "ä", "ö"].sort(german.compare) 
+> swedish = new Intl.Collator("sv") 
+> swedish.compare("z", "ö") 
+> ["z", "ä", "ö"].sort(swedish.compare) 
+> new Intl.Collator("de", {sensitivity: "base"}).compare("ä", "a") 
+> new Intl.Collator("en").compare(".a", "a") 
+> new Intl.Collator("en", {ignorePunctuation:true}).compare(".a", "a") 
+> new Intl.Collator("en").compare("99", "100") 
+> new Intl.Collator("en", {numeric:true}).compare("99", "100") 
+
+/*ch10*/
+> let start = Date.now() 
+  while (true) { 
+    if (Date.now() - start > 10 * 1000) break 
+  } 
+  console.log("10秒経過") 
+> while (true) {} 
+> document.open() 
+  document.write("<button id='btn'>ボタン</button>") 
+  let button = document.getElementById("btn") 
+> let callbackFunc = () => console.log("クリックされました") 
+  button.addEventListener("click", callbackFunc) 
+> let callbackFunc = () => console.log("10秒経過") 
+  setTimeout(callbackFunc, 10000) 
+> let src = "https://www.technohippy.dev/handsonjs/ch15/ex1/JavaScript-logo.png" 
+  document.write(`<img id="img" src="${src}">`) 
+  let image = document.getElementById("img") 
+  let callbackFunc = () => console.log("読み込みが完了しました") 
+  image.addEventListener("load", callbackFunc) 
+> let src = "https://www.technohippy.dev/handsonjs/ch15/ex1/JavaScript-logo.png" 
+  document.write(`<img id="img" src="${src}">`) 
+  let image = document.getElementById("img") 
+> let callbackFunc = () => console.log("読み込みが完了しました") 
+  image.addEventListener("load", callbackFunc) 
+> if (image.complete) { 
+    callbackFunc() 
+  } else { 
+    image.addEventListener("load", callbackFunc) 
+  } 
+> setTimeout(() => { 
+    console.log("処理A") 
+    setTimeout(() => { 
+      console.log("処理B") 
+      setTimeout(() => { 
+        console.log("処理C") 
+      }, Math.random() * 5000) 
+    }, Math.random() * 5000) 
+  }, Math.random() * 5000) 
+> function waitFor(msec) { 
+    return new Promise((resolve, reject) => { 
+      setTimeout(resolve, msec) 
+    }) 
+  } 
+> waitFor(5000).then(() => console.log("実行完了")) 
+> waitFor(Math.random() * 5000).then(() => { 
+    console.log("処理A") 
+    return waitFor(Math.random() * 5000) 
+  }).then(() => { 
+    console.log("処理B") 
+    return waitFor(Math.random() * 5000) 
+  }).then(() => { 
+    console.log("処理C") 
+  }) 
+> promise = waitFor(1000).then(() => { 
+    console.log("完了") 
+    return "完了状態" 
+  }) 
+> promise 
+> promise = waitFor(1000).then(() => { 
+    throw "エラー" 
+  }) 
+> promise 
+> function waitForAMoment(msec) { 
+    return new Promise((resolve, reject) => { 
+      if (msec < 2000) { 
+        setTimeout(() => resolve(msec), msec) 
+      } else { 
+        setTimeout(() => reject(new Error("timeout")), 2000) 
+      } 
+    }) 
+  } 
+> waitForAMoment(1000) 
+    .then(value => console.log(`成功: ${value}`)) 
+    .catch(error => console.log(`失敗: ${error}`)) 
+> waitForAMoment(10000) 
+    .then(value => console.log(`成功: ${value}`)) 
+    .catch(error => console.log(`失敗: ${error}`)) 
+> Promise.resolve(42) 
+> Promise.reject(new Error("エラー")) 
+> promise1 = new Promise(() => {}) 
+> promise2 = Promise.resolve(promise1) 
+> promise1 === promise2 
+> thenable = { 
+    then(resolve) { 
+      resolve(42) 
+    } 
+  } 
+> Promise.resolve(thenable) 
+> Promise.resolve(42).then(value => `成功:${value}`, error => error) 
+> Promise.reject(new Error("失敗")).then(value => `成功:${value}`, error => error) 
+> Promise.resolve().then(() => Promise.resolve(42)) 
+> Promise.reject() 
+    .then(() => console.log("成功1"), () => console.log("エラー1")) 
+    .then(() => console.log("成功2"), () => console.log("エラー2")) 
+> Promise.reject() 
+    .then(() => console.log("成功1"), () => { 
+      console.log("エラー1") 
+      throw "エラー1" 
+    }) 
+    .then(() => console.log("成功2"), () => { 
+      console.log("エラー2") 
+      return Promise.reject("エラー2") 
+    }) 
+    .then(() => console.log("成功3"), () => { 
+      console.log("エラー3") 
+    }) 
+> Promise.reject(new Error("error")).catch(err => console.log(err)) 
+> Promise.resolve(42).finally(() => console.log("完了")) 
+> Promise.reject(new Error("error")).finally(() => console.log("完了")) 
+> Promise.resolve(42) 
+    .then(() => console.log("一番目の処理")) 
+    .then(() => { 
+      console.log("二番目の処理（失敗）") 
+      return Promise.reject() 
+    }) 
+    .then(() => console.log("三番目の処理")) 
+    .catch(() => console.log("エラー処理")) 
+    .finally(() => console.log("終了処理")) 
+> Promise.resolve().then(() => console.log("Promise内")) 
+  console.log("Promise後") 
+> Promise.all([lagResolve(1000), lagResolve(5000), lagResolve(4000)]) 
+    .then(result => console.log(result)) 
+> Promise.all([lagReject(1000), lagResolve(5000), lagResolve(4000)]) 
+    .catch(result => console.log(result)) 
+> Promise.allSettled([lagReject(1000), lagResolve(5000), lagResolve(4000)]) 
+    .then(result => console.log(result)) 
+> Promise.race([lagResolve(1000), lagResolve(5000), lagResolve(4000)]) 
+    .then(result => console.log(result)) 
+> Promise.race([lagResolve(1000), lagReject(5000), lagReject(4000)]) 
+    .then(result => console.log(result)) 
+> Promise.race([lagReject(1000), lagResolve(5000), lagResolve(4000)]) 
+    .catch(result => console.log(result)) 
+> Promise.race([ 
+    Promise.all([lagResolve(1000), lagResolve(5000), lagResolve(4000)]), 
+    Promise.all([lagResolve(6000), lagResolve(500), lagResolve(100)]) 
+  ]).then(result => console.log(result)) 
+> async function answer() { 
+    return 42 
+  } 
+> promise = answer() 
+> promise.then(result => console.log(result)) 
+> async function raise() { 
+    throw new Error("エラー") 
+  } 
+> promise = raise() 
+> functionExp = async function() { 
+    return 42 
+  } 
+> functionExp() 
+> arrowFunc = async () => 42 
+> arrowFunc() 
+> class Klass { 
+    async functionMethod() { 
+      return 42 
+    } 
+  } 
+> new Klass().functionMethod() 
+> function waitFor(msec) { 
+    return new Promise((resolve, reject) => { 
+      setTimeout(() => resolve("Tick"), msec) 
+    }) 
+  } 
+> async function count(num) { 
+    for (let i = num; 0 <= i; i--) { 
+      const tick = await waitFor(1000) 
+      console.log(tick, i) 
+    } 
+  } 
+> count(3) 
+> showHtml("https://www.google.com") 
+> showHtml("https://twitter.com") 
+> let fizzBuzzAsyncIterator = { 
+    count: 0, 
+    max: 7, 
+    async next() { 
+      await new Promise(resolve => setTimeout(resolve, 1000)) 
+      this.count++ 
+      const done = this.max < this.count 
+      if (this.count % 6 === 0) { 
+        return {value:"FizzBuzz", done} 
+      } else if (this.count % 2 === 0) { 
+        return {value:"Fizz", done} 
+      } else if (this.count % 3 === 0) { 
+        return {value:"Buzz", done} 
+      } else { 
+        return {value:this.count, done} 
+      } 
+    } 
+  } 
+> let fizzBuzzAsyncIterable = { 
+    [Symbol.asyncIterator]() { 
+      return fizzBuzzAsyncIterator 
+    } 
+  } 
+> for await (let value of fizzBuzzAsyncIterable) { 
+    console.log(value) 
+  } 
+> async function* makeFizzBuzzAsyncGenerator(max) { 
+    for (let count = 1; count <= max; count++) { 
+      await new Promise(resolve => setTimeout(resolve, 1000)) 
+      if (count % 6 === 0) { 
+        yield "FizzBuzz" 
+      } else if (count % 2 === 0) { 
+        yield "Fizz" 
+      } else if (count % 3 === 0) { 
+        yield "Buzz" 
+      } else { 
+        yield count 
+      } 
+    } 
+  } 
+> for await (let value of makeFizzBuzzAsyncGenerator(7)) { 
+    console.log(value) 
+  } 
+
+/*ch11*/
+> let adder = new Function(..."abc", "return a+b+c") 
+> adder(1, 16, 25) 
+> adder.toString() 
+> let code = adder.toString() 
+> args = code.match(/\(([\s\S]+)\)/m)[1].trim().split(",") 
+> body = code.match(/\{([\s\S]+)\}/m)[1].trim().replace(/[+]/g, "*") 
+> multiplier = new Function(args, body) 
+> multiplier(1, 16, 25) 
+> array = [3, 4, 5] 
+> arrayProxy = new Proxy(array, {}) 
+> arrayProxy[1] 
+> arrayProxy.length 
+> arrayProxy[0] = 1 
+> arrayProxy 
+> array 
+> arrayProxy.map(n => n * n).reduce((s, n) => s + n, 0) 
+> array = [3.14, 9.8, 2.718] 
+> arrayProxy = new Proxy(array, { 
+    get(target, prop) { 
+      return Math.round(target[prop]) 
+    }, 
+    set(target, prop, value) { 
+      if (!Number.isInteger(value)) { 
+        throw new Error("not integer") 
+      } 
+      target[prop] = value 
+    }, 
+    has(target, prop) { 
+      return prop < 2 
+    }, 
+    ownKeys(target) { 
+      return ["0", "1", "length"] 
+    } 
+  }) 
+> arrayProxy[0] 
+> arrayProxy[1] 
+> arrayProxy[3] = 8.31 
+> arrayProxy[3] = 365 
+> array 
+> 0 in arrayProxy 
+> 1 in arrayProxy 
+> 2 in arrayProxy 
+> Object.getOwnPropertyNames(arrayProxy) 
+> arrayProxy[2] 
+> "length" in arrayProxy 
+> Object.getOwnPropertyDescriptor(array, "length") 
+> function add(a, b, c) { 
+    return a + b + c 
+  } 
+> add(1, 4 ,5) 
+> addProxy = new Proxy(add, { 
+    apply(target, thisArg, args) { 
+      return target.apply(thisArg, args.map(n => n * n)) 
+    } 
+  }) 
+> addProxy(1, 4 ,5) 
+> array = [..."WRYYYY"] 
+> array.join = new Proxy(Array.prototype.join, { 
+    apply(target, thisArg, args) { 
+      return target.apply(thisArg, ["!"]) 
+    } 
+  }) 
+> array.join() 
+> invalidProxy = new Proxy({}, { 
+    apply(target, thisArg, args) { 
+      return 0 
+    } 
+  }) 
+> invalidProxy() 
+> BetterArray = new Proxy(Array, { 
+    construct(target, args) { 
+      if (args.length === 1) { 
+        return [args[0]] 
+      } 
+      return new target(...args) 
+    } 
+  }) 
+> new BetterArray(3) 
+> new Array(3) 
+> InvalidNumber = new Proxy(Number, { 
+    construct(target, args) { 
+      return 0 
+    } 
+  }) 
+> new InvalidNumber() 
+> extensionProxy = new Proxy({}, { 
+    isExtensible(target) { 
+      console.log("isExtensibleに割り込み") 
+      return Object.isExtensible(target) 
+    }, 
+    preventExtensions(target) { 
+      console.log("preventExtensionsに割り込み") 
+      return Object.preventExtensions(target) 
+    } 
+  }) 
+> Object.isExtensible(extensionProxy) 
+> Object.preventExtensions(extensionProxy) 
+> obj = {} 
+> defineProxy = new Proxy(obj, { 
+    defineProperty(target, property, descriptor) { 
+      console.log(`プロパティ定義:${property}`) 
+      return true 
+    }, 
+    getOwnPropertyDescriptor(target, property) { 
+      console.log(`プロパティ記述子取得:${property}`) 
+      return {value:42, writable:true, enumerable:true, configurable:true} 
+    }, 
+    deleteProperty(target, property) { 
+      console.log(`プロパティ削除:${property}`) 
+      return true 
+    } 
+  }) 
+> Object.defineProperty(defineProxy, "prop1", {}) 
+> Object.defineProperties(defineProxy, {"prop2":{}, "prop3":{}}) 
+> Object.getOwnPropertyDescriptor(defineProxy, "prop") 
+> defineProxy.prop 
+> delete defineProxy.prop 
+> target = {val: 42} 
+> let { proxy, revoke } = Proxy.revocable(target, {}) 
+> proxy 
+> revoke 
+> proxy.val 
+> revoke() 
+> proxy.val 
+> target 
+> let arrayLike = {0:3.14, 1:9.8, 2:2.718, length:3} 
+> arrayProxy = new Proxy(arrayLike, { 
+    get(target, prop) { 
+      if (prop in target) { 
+        return Reflect.get(target, prop) 
+      } else { 
+        return Reflect.get(Array.prototype, prop) 
+      } 
+    }, 
+    set(target, prop, value) { 
+      return Reflect.set(target, prop, value) 
+    } 
+  }) 
+> arrayProxy[0] 
+> arrayProxy[1] = 8.31 
+> arrayProxy 
+> arrayProxy.reverse() 
+> arrayLike 
+> Function.prototype.apply.call(Math.floor, undefined, [3.14]) 
+> Reflect.apply(Math.floor, undefined, [3.14]) 
+
+/*ch12*/
+> globalThis.document 
+> globalThis === window 
+> window.document 
+> window 
+> location.href = "https://www.google.com/" 
+> navigator.appName 
+> navigator.appVersion 
+> navigator.language 
+> navigator.connection 
+> navigator.onLine 
+> document 
+> Object.getPrototypeOf(document) 
+> document.childNodes[0] 
+> Object.getPrototypeOf(document.childNodes[0]) 
+> document.childNodes[1] 
+> Object.getPrototypeOf(document.childNodes[1]) 
+> document.childNodes[1].childNodes[0] 
+> Object.getPrototypeOf(document.childNodes[1].childNodes[0]) 
+> document.childNodes[1].childNodes[1] 
+> Object.getPrototypeOf(document.childNodes[1].childNodes[1]) 
+> document.childNodes[1].childNodes[2] 
+> Object.getPrototypeOf(document.childNodes[1].childNodes[2]) 
+> document.childNodes[1].childNodes[2].childNodes[1] 
+> Object.getPrototypeOf(document.childNodes[1].childNodes[2].childNodes[1]) 
+> document.childNodes[1].childNodes[2].style.background = "black" 
+> document.body.style.background = "white" 
+> document.body.getRootNode() 
+> document.body.childNodes 
+> document.body.children 
+> document.body.children.html 
+> document.body.children.css 
+> document.body.firstChild 
+> document.body.firstElementChild 
+> document.body.children.css.previousSibling 
+> document.body.children.css.previousElementSibling 
+> document.getElementsByTagName("strong") 
+> document.body.children.css.getElementsByTagName("strong") 
+> document.getElementById("js") 
+> document.getElementsByClassName("note") 
+> document.body.getElementsByClassName("note") 
+> document.querySelector("meta[charset=UTF-8]") 
+> document.querySelectorAll(".note h1") 
+> document.body.querySelectorAll(".note p") 
+> document.nodeType 
+> document.nodeType === Node.DOCUMENT_NODE 
+> document.body.nodeType 
+> document.body.nodeType === Node.ELEMENT_NODE 
+> document.nodeName 
+> document.tagName 
+> document.body.nodeName 
+> document.body.tagName 
+> js = document.getElementById("js") 
+> js.id 
+> js.id = "javascript" 
+> js 
+> document.getElementById("js") 
+> document.getElementById("javascript") 
+> document.body.children.css.className 
+> css = document.body.children.css 
+> css.className += " stylesheet" 
+> css 
+> css.className.split(" ") 
+> css.className.split(" ").includes("stylesheet") 
+> css.classList 
+> css.classList.add("css") 
+> css.classList 
+> document.head.firstElementChild.attributes 
+> charset = document.head.firstElementChild.attributes[0] 
+> charset.name 
+> charset.value 
+> document.head.firstElementChild.getAttributeNames() 
+> meta = document.head.firstElementChild 
+> meta.hasAttribute("charset") 
+> meta.getAttribute("charset") 
+> meta.setAttribute("charset", "utf8") 
+> meta 
+> meta.removeAttribute("charset") 
+> meta 
+> document.querySelector("strong").style.display = "none" 
+> htmlNote = document.querySelector("p") 
+> htmlNote.textContent 
+> htmlNote.innerText 
+> htmlNote.textContent = "HTMLは文書のコンテンツと構造を表現します。" 
+> htmlNote 
+> node = document.body.firstElementChild 
+> node.parentNode.removeChild(node) 
+> document.createElement("div") 
+> document.createTextNode("HTML") 
+> let body = document.body 
+> body.insertBefore( 
+    document.createTextNode("insertBefore(js)"), body.children.js) 
+> body.appendChild(document.createTextNode("appendChild")) 
+> body.append(document.createElement("hr"), "append") 
+> body.prepend("prepend", document.createElement("hr")) 
+> let fragment = new DocumentFragment() 
+  fragment.appendChild(document.createElement("hr")) 
+  fragment.appendChild(document.createElement("hr")) 
+  fragment.appendChild(document.createElement("hr")) 
+  fragment.appendChild(document.createElement("hr")) 
+  document.body.appendChild(fragment) 
+> document.body.replaceChild(document.createElement("hr"), document.body.children.css) 
+> document.body.contentEditable = true 
+> document.execCommand("cut") 
+> document.execCommand("undo") 
+> document.body.style.background = "gray" 
+> document.body.style.fontSize = "200%" 
+> document.styleSheets[0].cssRules 
+> document.styleSheets[0].cssRules 
+> document.styleSheets[0].cssRules[0] 
+> document.styleSheets[0].cssRules[0].selectorText 
+> document.styleSheets[0].cssRules[0].style 
+> for (let rule of document.styleSheets[0].cssRules) { 
+    const selector = rule.selectorText 
+    for (let prop of rule.style) { 
+      console.log(`${selector} { ${prop}:${rule.style[prop]} }`) 
+    } 
+  } 
+> let h1Style = document.styleSheets[0].cssRules[0].style 
+> h1Style.fontSize = "50%" 
+> h1Style.setProperty("font-size", "300%", "important") 
+> h1Style.removeProperty("font-size") 
+> document.styleSheets[0].cssRules[0].selectorText = ".note" 
+> document.styleSheets[0].insertRule(` 
+    .note { 
+      margin:4px; 
+      border:1px solid black; 
+      background-color:lightYellow; 
+    }`) 
+> document.styleSheets[0].insertRule("body { color: red } h1 { color: red }") 
+> document.styleSheets[0].deleteRule(0) 
+> document.body.addEventListener("click",  
+    () => console.log("最初のイベントハンドラ")) 
+> let secondHandler = () => console.log("2つめのイベントハンドラ") 
+> document.body.addEventListener("click", secondHandler) 
+> document.body.dispatchEvent(new Event("click")) 
+> document.body.removeEventListener("click", secondHandler) 
+> document.body.dispatchEvent(new Event("click")) 
+> let keyLogger = evt => console.log( 
+`type:${evt.type} 
+code:${evt.code} 
+key:${evt.key} 
+shift:${evt.shiftKey} 
+`) 
+> document.addEventListener("keydown", keyLogger) 
+> document.addEventListener("keyup", keyLogger) 
+> let clicking = false 
+  document.addEventListener("mousedown", () => clicking = true) 
+  document.addEventListener("mouseup", () => clicking = false) 
+  document.addEventListener("mousemove", evt => { 
+    if (!clicking) return 
+    console.log( 
+  `clientX: ${evt.clientX} 
+  clientY: ${evt.clientY} 
+  shiftKey: ${evt.shiftKey} 
+  `) 
+  }) 
+> let callEvent = new CustomEvent("call", {detail: "もしもし私メリーさん"}) 
+> document.addEventListener("call", evt => console.log(evt.detail)) 
+> document.dispatchEvent(callEvent) 
+> document.body.addEventListener("click", evt => { 
+    evt.target.style.backgroundColor = 
+      `#${Math.floor(Math.random() * 0xffffff).toString(16)}` 
+  }) 
+> window.addEventListener("click",  
+    evt => console.log(`Ph.${evt.eventPhase} bubble window`)) 
+  window.addEventListener("click",  
+    evt => console.log(`Ph.${evt.eventPhase} capture window`), true) 
+  document.addEventListener("click",  
+    evt => console.log(`Ph.${evt.eventPhase} bubble document`)) 
+  document.addEventListener("click",  
+    evt => console.log(`Ph.${evt.eventPhase} capture document`), true) 
+  document.body.addEventListener("click",  
+    evt => console.log(`Ph.${evt.eventPhase} bubble body`)) 
+  document.body.addEventListener("click",  
+    evt => console.log(`Ph.${evt.eventPhase} capture body`), true) 
+> window.addEventListener("click", evt => evt.stopPropagation(), true) 
+> let as = document.getElementsByTagName("a") 
+> for (let i = 0; i < as.length; i++) { 
+    as[i].addEventListener("click", evt => evt.preventDefault()) 
+  } 
+> let infoPanel = document.createElement("info-panel") 
+> document.body.appendChild(infoPanel) 
+> infoPanel.style.border = "1px solid blue" 
+  infoPanel.style.display = "block" 
+  infoPanel.style.height = "5px" 
+> let div = document.createElement("div") 
+  div.innerHTML = ` 
+    <info-panel name="Black Sabbath" power="E" speed="A" range="A"> 
+    </info-panel>` 
+  document.body.append(div) 
+
+/*ch13*/
+> url = new URL("https://amazon.com/s?k=javascript&ref=nb_sb_noss_2") 
+> url.protocol 
+> url.host 
+> url.pathname 
+> url.search 
+> url.searchParams.get("k") 
+> new URL("不正なURI") 
+> new URL("mailto:javascript@example.com") 
+> encodeURI("http://日本語.jp") 
+> decodeURI("http://%E6%97%A5%E6%9C%AC%E8%AA%9E.jp") 
+> encodeURIComponent("http://日本語.jp") 
+> decodeURIComponent("http%3A%2F%2F%E6%97%A5%E6%9C%AC%E8%AA%9E.jp") 
+> fetch("https://jsonplaceholder.typicode.com/posts") 
+    .then(response => response.json()) 
+    .then(json => console.log(json.length, json[0])) 
+> fetch("https://jsonplaceholder.typicode.com") 
+    .then(response => response.text()) 
+    .then(text => console.log(text)) 
+> fetch("https://jsonplaceholder.typicode.com") 
+    .then(response => console.log(new Map(response.headers))) 
+> fetch("https://jsonplaceholder.typicode.com/posts", { 
+    method: "POST", 
+    headers: {"Content-Type": "application/json"}, 
+    body: '{"title":"Humpty Dumpty","body":"Humpty Dumpty sat on a wall"}' 
+  }) 
+  .then(response => response.json()) 
+  .then(json => console.log(json)) 
+> let request = new Request("https://jsonplaceholder.typicode.com/posts", { 
+    method: "POST", 
+    headers: {"Content-Type": "application/json"}, 
+    body: '{"title":"Humpty Dumpty","body":"Humpty Dumpty sat on a wall"}' 
+  }) 
+> fetch(request) 
+      .then(response => response.json()) 
+      .then(json => console.log(json)) 
+> fetch("https://jsonplaceholder.typicode.com/posts") 
+    .then(response => console.log("ここには来ません")) 
+    .catch(error => console.log(error)) 
+> fetch("https://jsonplaceholder.typicode.com/NotExist") 
+    .then(response => console.log(response)) 
+> fetch("https://jsonplaceholder.typicode.com/NotExist").then(response => { 
+    if (!response.ok) throw new Error(response.statusText) 
+    // ...何らかの正常処理... 
+  }).catch(error => console.log(error)) 
+> navigator.sendBeacon( 
+    "https://jsonplaceholder.typicode.com/posts", 
+    '{"title":"Humpty Dumpty","body":"Humpty Dumpty sat on a wall"}' 
+  ) 
+
+/*ch14*/
+> document.cookie 
+> let cookieMap = () => new Map(document.cookie.split(/;\s*/).map(kv => { 
+      const ms = kv.match(/([^=]+)=(.*)/) 
+      return [ms[1], ms[2].replace(/(^"|"$)/g, "")] 
+    })) 
+> cookies = cookieMap() 
+> cookies.get("lang") 
+> cookies.get("_twitter_sess") 
+> document.cookie = "power=E" 
+> cookieMap().get("power") 
+> document.cookie = "power=C" 
+> cookieMap().get("power") 
+> let doc = { 
+    _cookie: new Map(), 
+    get cookie() { 
+      return [...this._cookie].map(kv => kv.join("=")).join(";") 
+    }, 
+    set cookie(val) { 
+      this._cookie.set(...val.split("=")) 
+    } 
+  } 
+> doc.cookie = "power=B" 
+> doc.cookie = "speed=C" 
+> doc.cookie 
+> document.cookie = "power=B;max-age=10" 
+> cookieMap().get("power") 
+> cookieMap().get("power") 
+> document.cookie = "power=B;max-age=1000" 
+> cookieMap().get("power") 
+> document.cookie = "power=B;max-age=10" 
+> cookieMap().get("power") 
+> cookieMap().get("power") 
+> document.cookie = "range=D;max-age=1000;path=/i" 
+> localStorage.getItem("Session") 
+> localStorage.getItem("存在しないキー") 
+> localStorage.setItem("power", "B") 
+> localStorage.getItem("power") 
+> localStorage.setItem("The Fool", {power:"B", speed:"C", range:"D"}) 
+> localStorage.getItem("The Fool") 
+> localStorage.setItem("The Fool",  
+    JSON.stringify({power:"B", speed:"C", range:"D"})) 
+> localStorage.getItem("The Fool") 
+> JSON.parse(localStorage.getItem("The Fool")) 
+> while (true) { 
+    try { 
+      const longItem = localStorage.getItem("long item") 
+      localStorage.setItem("long item", `${longItem}${longItem}`) 
+    } catch (err) { 
+      console.log(err) 
+      break 
+    } 
+  } 
+> localStorage.setItem("power", "B") 
+> localStorage.getItem("power") 
+> localStorage.removeItem("power") 
+> localStorage.getItem("power") 
+> localStorage.setItem("power", null) 
+> localStorage.getItem("power") 
+> localStorage.setItem("power", "B") 
+> localStorage.setItem("speed", "C") 
+> localStorage.clear() 
+> localStorage.getItem("power") 
+> localStorage.getItem("speed") 
+> for (let i = 0; i < localStorage.length; i++) { 
+    console.log(localStorage.key(i)) 
+  } 
+> window.addEventListener("storage", evt => console.log(evt)) 
+> indexedDB.open("jojodb", 1) 
+> let openRequest = indexedDB.open("jojodb", 1) 
+  openRequest.addEventListener("success",  
+    evt => console.log(`success: ${evt.target.result}`)) 
+  openRequest.addEventListener("error",  
+    evt => console.error(`error: ${evt.target.errorCode}`)) 
+> let openRequest = indexedDB.open("jojodb", 2) 
+  openRequest.addEventListener("upgradeneeded", evt => { 
+    const db = evt.target.result 
+    const standStore = db.createObjectStore("stands",  
+      {keyPath:"id", autoIncrement:true}) 
+    console.log(standStore) 
+  }) 
+> let db 
+  let openRequest = indexedDB.open("jojodb", 1) 
+  openRequest.addEventListener("upgradeneeded", evt => { 
+    db = evt.target.result 
+    const standStore = db.createObjectStore("stands",  
+      {keyPath:"id", autoIncrement:true}) 
+    standStore.createIndex("nameIndex", "name", {unique: true}) 
+    standStore.createIndex("powerIndex", "power") 
+  }) 
+> let transaction = db.transaction(["stands"], "readwrite") 
+  transaction.addEventListener("complete",  
+    evt => console.log("transaction complete")) 
+  let standStore = transaction.objectStore("stands") 
+  let addRequest = standStore.add( 
+    {name:"The Fool", power:"B", speed:"C", range:"D"}) 
+  addRequest.addEventListener("success",  
+    evt => console.log(`add success (Key:${evt.target.result})`)) 
+> let transaction = db.transaction("stands", "readwrite") 
+  let standStore = transaction.objectStore("stands") 
+  standStore.add({name:"Crazy Diamond", power:"A", speed:"A", range:"D"}) 
+  standStore.add({name:"Echoes", power:"E", speed:"E", range:"B"}) 
+  standStore.add({name:"The Hand", power:"B", speed:"B", range:"D"}) 
+  standStore.add({name:"The World", power:"A", speed:"A", range:"C"}) 
+  standStore.add({name:"Hierophant Green", power:"C", speed:"B", range:"A"}) 
+> let standStore = db.transaction("stands").objectStore("stands") 
+  getRequest = standStore.get(1) 
+  getRequest.addEventListener("success", 
+    evt => console.log(evt.target.result)) 
+> let transaction = db.transaction("stands") 
+  let nameIndex = transaction.objectStore("stands").index("nameIndex") 
+  nameIndex.get("Echoes").addEventListener("success", 
+    evt => console.log(evt.target.result)) 
+> let standStore = db.transaction("stands").objectStore("stands") 
+  let powerIndex = standStore.index("powerIndex") 
+  powerIndex.getAll("B").addEventListener("success",  
+    evt => console.log(evt.target.result)) 
+> let standStore = db.transaction("stands").objectStore("stands") 
+  let powerIndex = standStore.index("powerIndex") 
+  let range = IDBKeyRange.bound("A", "C") 
+  powerIndex.getAll(range).addEventListener("success", 
+    evt => console.log(evt.target.result)) 
+> let standStore = db.transaction("stands").objectStore("stands") 
+  let powerIndex = standStore.index("powerIndex") 
+  let range = IDBKeyRange.bound("A", "C") 
+  powerIndex.getAll(range, 3).addEventListener("success", 
+    evt => console.log(evt.target.result)) 
+> let standStore = db.transaction("stands").objectStore("stands") 
+  standStore.openCursor().addEventListener("success", evt => { 
+    const cursor = evt.target.result 
+    if (cursor) { 
+      console.log(cursor.value) 
+      cursor.continue() 
+    } else { 
+      console.log("終了") 
+    } 
+  }) 
+> let standStore = db.transaction("stands").objectStore("stands") 
+  let range = IDBKeyRange.lowerBound(4) 
+  standStore.openCursor(range).addEventListener("success", evt => { 
+    const cursor = evt.target.result 
+    if (cursor) { 
+      console.log(cursor.value) 
+      cursor.continue() 
+    } 
+  }) 
+> let transaction = db.transaction("stands") 
+  let powerIndex = transaction.objectStore("stands").index("powerIndex") 
+  let range = IDBKeyRange.upperBound("C", true) 
+  powerIndex.openCursor(range).addEventListener("success", evt => { 
+    const cursor = evt.target.result 
+    if (cursor) { 
+      console.log(cursor.value) 
+      cursor.continue() 
+    } 
+  }) 
+> let transaction = db.transaction("stands", "readwrite") 
+  let standStore = transaction.objectStore("stands") 
+  standStore.index("nameIndex").get("Echoes").addEventListener("success",  
+    evt => { 
+      const echoes = evt.target.result 
+      echoes.power = "C" 
+      echoes.speed = "D" 
+      standStore.put(echoes) 
+    }) 
+> db.transaction("stands", "readwrite").objectStore("stands") 
+    .put({id:3, name:"Echoes", power:"B", speed:"B", range:"C"}) 
+> db.transaction("stands", "readwrite").objectStore("stands").delete(5) 
+
+/*ch15*/
+> let img = new Image(250, 150) 
+  img.src = "./JavaScript-logo.png" 
+  document.body.prepend(img) 
+> let img = new Image(250, 150) 
+  img.addEventListener("load", evt => console.log( 
+    img.width, img.height, img.naturalWidth, img.naturalHeight)) 
+  img.src = "./JavaScript-logo.png" 
+> video = document.getElementById("video") 
+> video.play() 
+> video.pause() 
+> video.currentTime 
+> video.currentTime = 10 
+> video.paused 
+> video.play() 
+> video.paused 
+> video.volume 
+> video.volume = 0.5 
+> video.addEventListener("play", evt => console.log("再生開始")) 
+> video.addEventListener("pause", evt => console.log("一時停止")) 
+> video.addEventListener("ended", evt => console.log("再生終了")) 
+> video.play() 
+> video.pause() 
+> video.play() 
+> audio = document.getElementById("audio") 
+> audio.play() 
+> audio.pause() 
+> audio.currentTime 
+> audio.volume 
+> audio2 = new Audio("./fall_morning_river.mp3") 
+> audio2.play() 
+> audio2.pause() 
+> img = document.getElementById("image") 
+> img.style.transform = "translate(100px, 50px)" 
+> img.style.transform = "translate(100px, 50px) rotate(45deg) " +  
+    "scale(2, 0.5) skew(20deg, 0)" 
+> video = document.getElementById("video") 
+> video.style.transform = "rotate(-20deg) skew(0, 20deg)" 
+> section = document.getElementsByTagName("section")[0] 
+> section.style.transform = "translate(40px, 50px) rotate(110deg)" 
+> img = document.getElementById("image") 
+> img.style.filter = "grayscale(50%)" 
+> img.style.filter = "blur(3px)" 
+> img.style.filter = "invert(100%)" 
+> img.style.filter = "grayscale(50%) blur(3px) invert(100%)" 
+> audio = document.getElementById("audio") 
+> audio.style.filter = "invert(100%)" 
+  audio.style.transform = "rotate(360deg)" 
+> audio = document.getElementById("audio") 
+> audio.classList.toggle("invert-rotate") 
+> audio.classList.toggle("invert-rotate") 
+> document.body.innerHTML = ` 
+    <svg xmlns="http://www.w3.org/2000/svg"> 
+      <rect x="10" y="10" width="160" height="100" fill="#09f" /> 
+      <circle cx="80" cy="60" r="28" fill="#ff0" /> 
+    </svg>` 
+> let ns = "http://www.w3.org/2000/svg" 
+  let svg = document.createElementNS(ns, "svg") 
+  let rect = document.createElementNS(ns, "rect") 
+  for (let [k, v] of Object.entries( 
+    {x:10, y:10, width:160, height:100, fill:"#09f"})) { 
+    rect.setAttribute(k, v) 
+  } 
+  let circle = document.createElementNS(ns, "circle") 
+  for (let [k, v] of Object.entries( 
+    {cx:80, cy:60, r:28, fill:"#ff0"})) { 
+    circle.setAttribute(k, v) 
+  } 
+  svg.appendChild(rect) 
+  svg.appendChild(circle) 
+  document.body.prepend(svg) 
+> circle.addEventListener("click", () => { 
+    let color = `#${Math.floor(Math.random() * 0xffffff).toString(16)}` 
+    circle.setAttribute("fill", color) 
+  }) 
+> document.body.innerHTML = ` 
+    <svg viewBox="0 0 1200 450" xmlns="http://www.w3.org/2000/svg"> 
+      <g fill="yellow" stroke="blue" stroke-width="5"> 
+        <ellipse transform="translate(180 60)" 
+          rx="170" ry="50" /> 
+        <line x1="10" y1="200" x2="350" y2="250" /> 
+        <polygon transform="translate(150 -50)" 
+          points="350,75 379,161 469,161 397,215 423,301 
+                  350,250 277,301 303,215 231,161 321,161" /> 
+        <polyline transform="translate(-30, 50)" 
+          points="50,375 150,375 150,325 250,325 250,375 
+                  350,375 350,250 450,250 450,375" /> 
+        <path transform="translate(-100 70)" 
+          d="M600,350 l 50,-25 
+             a25,25 -30 0,1 50,-25 l 50,-25 
+             a25,50 -30 0,1 50,-25 l 50,-25 
+             a25,75 -30 0,1 50,-25 l 50,-25 
+             a25,100 -30 0,1 50,-25 l 50,-25" /> 
+      </g> 
+      <g font-size="30"> 
+        <text x="130" y="70">ellipse</text> 
+        <text x="150" y="200">line</text> 
+        <text x="440" y="140">polygon</text> 
+        <text x="120" y="350">polyline</text> 
+        <text x="720" y="350">path</text> 
+      </g> 
+    </svg>` 
+> canvas = document.getElementById("canvas") 
+> ctx = canvas.getContext("2d") 
+> ctx.beginPath()     # ❶
+  ctx.moveTo(50, 50)  # ❷
+  ctx.lineTo(50, 80)  # ❸
+  ctx.lineTo(10, 80)  # ❹
+  ctx.closePath()     # ❺
+  ctx.stroke() 
+> ctx.fill() 
+> ctx.beginPath() 
+  ctx.moveTo(55, 80) 
+  ctx.arc(125, 80, 70, Math.PI, 0, true) 
+  ctx.bezierCurveTo(170, 100, 120, -50, 55, 50) 
+  ctx.closePath() 
+  ctx.moveTo(105, 50) 
+  ctx.ellipse(85, 50, 20, 15, 0, 0, 2 * Math.PI) 
+  ctx.moveTo(90, 50) 
+  ctx.arc(80, 50, 10, 0, 2 * Math.PI) 
+  ctx.rect(10, 85, 40, 5) 
+  ctx.fill() 
+> ctx.clearRect(0, 0, 200, 200) 
+> ctx.fillStyle = "blue" 
+> ctx.strokeStyle = "red" 
+> ctx.lineWidth = 3 
+> ctx.fill() 
+> ctx.stroke() 
+> let img = document.getElementById("image") 
+> let ctx = document.getElementById("canvas").getContext("2d") 
+> for (let i = 0; i < 4; i++) ctx.drawImage(img, -50*i, -30*i) 
+> ctx.clearRect(0, 0, 200, 200) 
+> for (let i = 0; i < 4; i++) { 
+    ctx.drawImage(img, 150-50*i, 100-30*i, 40, 70) 
+  } 
+> ctx.clearRect(0, 0, 200, 200) 
+> ctx.drawImage(img, 100, 100, 50, 90, 10, 10, 180, 160) 
+> let img = document.getElementById("image") 
+  let ctx = document.getElementById("canvas").getContext("2d") 
+  ctx.drawImage(img, 0, 0) 
+  ctx.getImageData(0, 0, 200, 200) 
+> let imageData = ctx.getImageData(0, 0, 200, 200) 
+> let [r, g, b, a] = imageData.data 
+> [r, g, b, a] 
+> width = 200, height = 200, rgba = 4 
+  row = height / 2 + 10 
+  base = width * rgba * row + width / 2 * rgba 
+  r = imageData.data[base + 0] 
+  g = imageData.data[base + 1] 
+  b = imageData.data[base + 2] 
+  a = imageData.data[base + 3] 
+> [r, g, b, a] 
+> ctx.getImageData(100, 100, 1, 1).data 
+> for (let y = 0; y < 200; y++) { 
+    for (let w = 0, x = y; w < 20 && x < 200; w++, x++) { 
+      imageData.data[y * 200 * 4 + x * 4] = 255 
+      imageData.data[y * 200 * 4 + x * 4 + 1] = 0 
+      imageData.data[y * 200 * 4 + x * 4 + 2] = 0 
+      imageData.data[y * 200 * 4 + x * 4 + 3] = 255 
+    } 
+  } 
+  ctx.putImageData(imageData, 0, 0) 
+> const mx = 10, my = 10 
+  for (let y = 0; y < 200; y += my) { 
+    for (let x = 0; x < 200; x += mx) { 
+      const r = imageData.data[y * 200 * 4 + x * 4] 
+      const g = imageData.data[y * 200 * 4 + x * 4 + 1] 
+      const b = imageData.data[y * 200 * 4 + x * 4 + 2] 
+      const a = imageData.data[y * 200 * 4 + x * 4 + 3] 
+      for (let dy = 0; dy < my; dy++) { 
+        for (let dx = 0; dx < mx; dx++) { 
+          imageData.data[(y+dy) * 200 * 4 + (x+dx) * 4] = r 
+          imageData.data[(y+dy) * 200 * 4 + (x+dx) * 4 + 1] = g 
+          imageData.data[(y+dy) * 200 * 4 + (x+dx) * 4 + 2] = b 
+          imageData.data[(y+dy) * 200 * 4 + (x+dx) * 4 + 3] = a 
+        } 
+      } 
+    } 
+  } 
+  ctx.putImageData(imageData, 0, 0) 
+> let canvas = document.getElementById("canvas") 
+  let ctx = canvas.getContext("bitmaprenderer") 
+> let offscreen = new OffscreenCanvas(canvas.width, canvas.height) 
+  offscreenCtx = offscreen.getContext("2d") 
+  offscreenCtx.moveTo(105, 50) 
+  offscreenCtx.ellipse(85, 50, 20, 15, 0, 0, 2 * Math.PI) 
+  offscreenCtx.fill() 
+> let bitmap = offscreen.transferToImageBitmap() 
+  ctx.transferFromImageBitmap(bitmap) 
+> canvas = document.getElementById("canvas") 
+> const gl = canvas.getContext("webgl") 
+> let vertices = [-0.5, 0.5, -0.5, -0.5, 0.5, -0.5] 
+  let vertexBuffer = gl.createBuffer() 
+  gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer) 
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), 
+    gl.STATIC_DRAW) 
+  gl.bindBuffer(gl.ARRAY_BUFFER, null) 
+> let vertexCode = ` 
+    attribute vec2 coordinates; 
+    void main(void) { 
+      gl_Position = vec4(coordinates, 0., 1.); 
+    } 
+  ` 
+  let vertexShader = gl.createShader(gl.VERTEX_SHADER) 
+  gl.shaderSource(vertexShader, vertexCode) 
+  gl.compileShader(vertexShader) 
+> let fragmentCode = ` 
+    void main(void) { 
+      gl_FragColor = vec4(1., 1., 1., 1.); 
+    } 
+  ` 
+  let fragmentShader = gl.createShader(gl.FRAGMENT_SHADER) 
+  gl.shaderSource(fragmentShader, fragmentCode) 
+  gl.compileShader(fragmentShader) 
+> let shaderProgram = gl.createProgram() 
+  gl.attachShader(shaderProgram, vertexShader) 
+  gl.attachShader(shaderProgram, fragmentShader) 
+  gl.linkProgram(shaderProgram) 
+  gl.useProgram(shaderProgram) 
+> gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer) 
+  let coordinates = gl.getAttribLocation(shaderProgram, "coordinates") 
+  gl.vertexAttribPointer(coordinates, 2, gl.FLOAT, false, 0, 0) 
+  gl.enableVertexAttribArray(coordinates) 
+> gl.clearColor(0., 0., 0., 1.) 
+  gl.enable(gl.DEPTH_TEST) 
+  gl.clear(gl.COLOR_BUFFER_BIT) 
+  gl.viewport(0, 0, canvas.width, canvas.height) 
+  gl.drawArrays(gl.TRIANGLES, 0, 3) 
+> let soundBuffer 
+  let audioContext = new AudioContext() 
+  fetch("./brook1.mp3").then(resp => { 
+    return resp.arrayBuffer() 
+  }).then(buffer => { 
+    return audioContext.decodeAudioData(buffer) 
+  }).then(buffer => { 
+    soundBuffer = buffer 
+    const source = audioContext.createBufferSource() 
+    source.buffer = buffer 
+    source.connect(audioContext.destination) 
+    source.start(0) 
+  }) 
+> let source = audioContext.createBufferSource() 
+  source.buffer = soundBuffer 
+  let filter = audioContext.createBiquadFilter() 
+  filter.type = "lowpass" 
+  filter.frequency.value = 500  
+  source.connect(filter).connect(audioContext.destination) 
+  source.start(0) 
+> let birdBuffer 
+  fetch("./bulbul.mp3").then(resp => { 
+    return resp.arrayBuffer() 
+  }).then(buffer => { 
+    return audioContext.decodeAudioData(buffer) 
+  }).then(buffer => { 
+    birdBuffer = buffer 
+    const birdSource = audioContext.createBufferSource() 
+    birdSource.buffer = buffer 
+    birdSource.connect(audioContext.destination) 
+    birdSource.start(audioContext.currentTime + 5, 0, 8) 
+    const riverSource = audioContext.createBufferSource() 
+    riverSource.buffer = soundBuffer 
+    riverSource.connect(audioContext.destination) 
+    riverSource.start(audioContext.currentTime) 
+  }) 
+> let analyser = audioContext.createAnalyser() 
+  analyser.fftSize = 256 
+  let source = audioContext.createBufferSource() 
+  source.buffer = birdBuffer 
+  source.connect(analyser).connect(audioContext.destination) 
+> let bufferLength = analyser.frequencyBinCount 
+  let dataArray = new Uint8Array(bufferLength) 
+  let height = 200 
+  let ctx = document.getElementById("canvas").getContext("2d") 
+  let imageData = ctx.getImageData(0, 0, bufferLength, height) 
+> let count = 0 
+  let draw = () => { 
+    analyser.getByteFrequencyData(dataArray) 
+    for (let i = 0; i < dataArray.length; i++) { 
+      imageData.data[4*(128*count + i)] = dataArray[i] 
+      imageData.data[4*(128*count + i) + 1] = dataArray[i] 
+      imageData.data[4*(128*count + i) + 2] = dataArray[i] 
+      imageData.data[4*(128*count + i) + 3] = 255 
+    } 
+    if (count < height) { 
+      count++ 
+      requestAnimationFrame(draw) 
+    } else { 
+      ctx.putImageData(imageData, 0, 0) 
+    } 
+  } 
+> source.start(0, 0, 4) 
+  draw() 
+> let baseTime = performance.now() 
+  let prevTime = baseTime 
+  let animate = () => { 
+    const now = performance.now() 
+    console.log(now - prevTime) 
+    prevTime = now 
+    if (now - baseTime < 5000) window.requestAnimationFrame(animate) 
+  } 
+  animate() 
+> img = document.getElementById("image") 
+> img.requestFullscreen() 
+> img.requestFullscreen().then(() => { 
+    setTimeout(() => document.exitFullscreen(), 5000) 
+  }) 
+> img.addEventListener("fullscreenchange", () => { 
+    if (document.fullscreenElement) { 
+      setTimeout(() => document.exitFullscreen(), 5000) 
+    } 
+  }) 
+> img.requestFullscreen() 
+> document.body.requestPointerLock() 
+> document.exitPointerLock() 
+> document.addEventListener("pointerlockchange", () => { 
+    const mousemoveHandler = (evt) => { 
+      console.log(`movement:${evt.movementX},${evt.movementY 
+        } / client:${evt.clientX},${evt.clientY}`) 
+    } 
+    if (document.pointerLockElement) { 
+      document.body.addEventListener("mousemove", mousemoveHandler) 
+    } else { 
+      document.body.removeEventListener("mousemove", mousemoveHandler) 
+    } 
+  }, false) 
+  document.body.requestPointerLock() 
+> let img = new Image(250, 150) 
+  img.src = "./JavaScript-logo.png" 
+> img.addEventListener("load", evt => console.log( 
+    img.width, img.height, img.naturalWidth, img.naturalHeight)) 
+
+/*ch16*/
+> navigator.geolocation.getCurrentPosition( 
+    position => console.log(position), err => console.log(err)) 
+> code = navigator.geolocation.watchPosition( 
+    position => console.log(position), err => console.log(err)) 
+> navigator.geolocation.clearWatch(code) 
+> let latitude = 35.68 
+  let longitude = 139.75 
+  let endpoint = "https://mreversegeocoder.gsi.go.jp/reverse-geocoder/" + 
+    `LonLatToAddress?lat=${latitude}&lon=${longitude}` 
+  fetch(endpoint).then(resp => resp.json()).then(json => console.log(json)) 
+> window.addEventListener("deviceorientation", evt => 
+    console.log(`alpha:${evt.alpha} beta:${evt.beta} gamma:${evt.gamma}`) 
+  ) 
+> window.addEventListener("orientationchange", () => 
+    console.log(`画面の角度: ${screen.orientation.angle}`)) 
+> let accelerometer = new Accelerometer({frequency: 1}) 
+  accelerometer.addEventListener("reading", () => { 
+    console.log(`X軸方向の加速度: ${accelerometer.x}`) 
+    console.log(`Y軸方向の加速度: ${accelerometer.y}`) 
+    console.log(`Z軸方向の加速度: ${accelerometer.z}`) 
+  }) 
+  accelerometer.start() 
+> let gyroscope = new Gyroscope({frequency: 1}) 
+  gyroscope.addEventListener("reading", () => { 
+    console.log(`X軸方向の角加速度: ${gyroscope.x}`) 
+    console.log(`Y軸方向の角加速度: ${gyroscope.y}`) 
+    console.log(`Z軸方向の角加速度: ${gyroscope.z}`) 
+  }) 
+  gyroscope.start() 
+> let handler = evt => { 
+    const acc = evt.acceleration 
+    const acg = evt.accelerationIncludingGravity 
+    const rot = evt.rotationRate 
+    console.log(`加速度: (${acc.x}, ${acc.y}, ${acc.z})`) 
+    console.log(`加速度+重力加速度: (${acg.x}, ${acg.y}, ${acg.z})`) 
+    console.log(`角速度: (${rot.alpha}, ${rot.beta}, ${rot.gamma})`) 
+  } 
+  window.addEventListener("devicemotion", handler) 
+> window.removeEventListener("devicemotion", handler) 
+> navigator.vibrate([ 
+    1, 1, 3, 1, 3, 3,       // . _ _ 
+    1, 1, 1, 1, 1, 1, 1, 3, // . . . .
+    3, 1, 1, 1, 3, 1, 3, 3  // _ . _ _
+  ].map(e => e*100)) 
+> let video = document.createElement("video") 
+  document.body.prepend(video) 
+  navigator.mediaDevices.getUserMedia({video:true}).then(stream => { 
+    video.srcObject = stream 
+    video.onloadedmetadata = () => video.play() 
+  }) 
+> let video = document.getElementById("video") 
+  let canvas = document.getElementById("canvas") 
+  let ctx = canvas.getContext("2d") 
+  ctx.drawImage(video, 0, 0, 400, 255) 
+> let mosaic = imageData => { 
+    const mx = 10, my = 10 
+    for (let y = 0; y < 200; y += my) { 
+      for (let x = 0; x < 200; x += mx) { 
+        const r = imageData.data[y * 200 * 4 + x * 4] 
+        const g = imageData.data[y * 200 * 4 + x * 4 + 1] 
+        const b = imageData.data[y * 200 * 4 + x * 4 + 2] 
+        const a = imageData.data[y * 200 * 4 + x * 4 + 3] 
+        for (let dy = 0; dy < my; dy++) { 
+          for (let dx = 0; dx < mx; dx++) { 
+            imageData.data[(y+dy) * 200 * 4 + (x+dx) * 4] = r 
+            imageData.data[(y+dy) * 200 * 4 + (x+dx) * 4 + 1] = g 
+            imageData.data[(y+dy) * 200 * 4 + (x+dx) * 4 + 2] = b 
+            imageData.data[(y+dy) * 200 * 4 + (x+dx) * 4 + 3] = a 
+          } 
+        } 
+      } 
+    } 
+  } 
+> let loopMosaic = (video, ctx) => { 
+    ctx.drawImage(video, 0, 0, 400, 255) 
+    let imageData = ctx.getImageData(0, 0, 200, 200) 
+    mosaic(imageData) 
+    ctx.putImageData(imageData, 0, 0) 
+    setTimeout(() => loopMosaic(video, ctx), 100) 
+  } 
+  loopMosaic(video, ctx) 
+
+/*ch17*/
+> navigator.share({ 
+    url: "https://www.technohippy.dev/handsonjs/", 
+    title: "ハンズオンJavaScriptサンプルコード", 
+    text: "サポートサイト" 
+  }) 
+
+/*ch18*/
+> navigator.credentials.get({ 
+    password: true 
+  }).then(cred => console.log(cred)) 
+> navigator.credentials.get({ 
+    password: true 
+  }).then(cred => console.log(cred)) 
+> navigator.credentials.get({ 
+    federated: { 
+      providers: [ 
+        "https://accounts.google.com" 
+      ] 
+    } 
+  }).then(cred => console.log(cred)) 
+> navigator.credentials.get({ 
+    password: true, 
+    federated: { 
+      providers: [ 
+        "https://accounts.google.com" 
+      ] 
+    } 
+  }).then(cred => console.log(cred)) 
+> let credRawId 
+  credParams = { 
+    publicKey: { 
+      rp: { 
+        name: "RP Name" 
+      }, 
+      user: { 
+        id: new Uint8Array(), 
+        name: "user@example.com", 
+        displayName: "User Name" 
+      }, 
+      pubKeyCredParams: [{ 
+        type: "public-key", 
+        alg: -7 
+      }], 
+      challenge: new ArrayBuffer() 
+    } 
+  } 
+  navigator.credentials.create(credParams).then(cred => { 
+    credRawId = cred.rawId 
+    let response = cred.response 
+    // このresponseをサーバーに送り返す 
+    console.log(cred) 
+  }) 
+> credParams = { 
+    publicKey: { 
+      allowCredentials: [{ 
+        id: credRawId, 
+        type: "public-key" 
+      }], 
+      challenge: new ArrayBuffer() 
+    } 
+  } 
+  navigator.credentials.get(credParams).then(cred => console.log(cred)) 
+
+/*ch19*/
+> Date.now() 
+> performance.now() 
+> performance.timeOrigin 
+> function longMethod() { 
+    let sum = 0; 
+    for (let i = 0; i < 100000000; i++) { 
+      sum += Math.random(); 
+    } 
+    return sum; 
+  } 
+> console.time("longMethod") 
+  longMethod() 
+  console.timeEnd("longMethod") 
+> let name = "https://www.oreilly.co.jp/images/ml-header-home-blinking.gif" 
+  performance.getEntriesByName(name) 
+> performance.getEntriesByType("resource").map(p => p.name) 
+> performance.getEntriesByType("navigation")[0] 
+> performance.mark("male") 
+  performance.mark("female") 
+  performance.mark("male") 
+  performance.mark("male") 
+  performance.mark("female") 
+  performance.mark("male") 
+  performance.mark("female") 
+> performance.getEntriesByName("female")[0] 
+> performance.mark("start") 
+  setTimeout(() => { 
+    performance.mark("middle") 
+    setTimeout(() => { 
+      performance.mark("end") 
+      performance.measure("start to middle", "start", "middle") 
+      performance.measure("start to end", "start", "end") 
+      console.log(performance.getEntriesByType("measure")) 
+    }, 1000) 
+  }, 2000) 
+> performance.clearMarks() 
+  performance.clearMeasures() 
+> let observer = new PerformanceObserver(entries => 
+    console.log(entries.getEntries().map(e => e.name))) 
+  observer.observe({type:"mark"}) 
+> performance.mark("オラ") 
+> performance.mark("オラオラ") 
+> worker1 = new Worker("js/worker1.js") 
+> worker1.terminate() 
+> worker2 = new Worker("js/worker2.js") 
+> worker2.addEventListener("message",  
+    event => console.log(`受信「${event.data}」`)) 
+> worker2.postMessage("World") 
+> worker2.postMessage("my friend") 
+> try { 
+    worker2.postMessage(63194) 
+  } catch(err) { 
+    console.error(`例外を捕捉: ${err}`) 
+  } 
+> worker2.addEventListener("error", event => { 
+    console.error(`例外を捕捉: ${event.message}`) 
+  }) 
+> worker2.postMessage(63194) 
+> worker3 = new Worker("js/worker3.js") 
+> worker3.postMessage(function() {}) 
+> worker3.postMessage(document.body) 
+> const surface = {power:"B", speed:"B", range:"C"} 
+  worker3.postMessage(surface) 
+> messageData 
+> messageData["power"] = "A" 
+> messageData 
+> surface 
+> surface["speed"] = "A" 
+> surface 
+> messageData 
+> gf = new Uint32Array([81194, 22194, 63194]) 
+> worker3.postMessage({member: gf.buffer}, [gf.buffer]) 
+> gf 
+> new Uint32Array(messageData.member) 
+> worker4 = new Worker("js/worker4.js") 
+> worker4.addEventListener("message", event => console.log(event.data)) 
+> worker4.postMessage("9 / 3 + 2i") 
+> let canvas = document.getElementById("canvas") 
+  let offscreen = canvas.transferControlToOffscreen() 
+  let worker5 = new Worker("js/worker5.js") 
+  worker5.postMessage({canvas:offscreen, color:"blue"}, [offscreen]) 
+> worker3 = new Worker("js/worker3.js") 
+> worker3.postMessage("tab1") 
+> messageData 
+> messageData 
+> let shared6 = new SharedWorker("js/worker6.js") 
+  shared6.port.addEventListener("message", 
+    event => console.log(event.data)) 
+  shared6.port.start() 
+  shared6.port.postMessage("タブ1") 
+> let shared6 = new SharedWorker("js/worker6.js") 
+  shared6.port.addEventListener("message", 
+    event => console.log(event.data)) 
+  shared6.port.start() 
+  shared6.port.postMessage("タブ2") 
+> messageData 
+> let memory = new WebAssembly.Memory({initial:1}) 
+  let opts = { 
+    js: { mem: memory }, 
+    console: { log: v => console.log(`インポートした関数で表示: ${v}`) } 
+  } 
+  WebAssembly.instantiateStreaming(fetch("wasm/add.wasm"), opts).then( 
+    obj => { 
+      obj.instance.exports.add(40, 2) 
+      console.log(`メモリから取得: ${new Int32Array(memory.buffer)[0]}`) 
+    } 
+  ) 
+
+/*ch21*/
+> let tusk1 = { 
+    cry: "Chumimin", 
+    act1() { 
+      console.log(this.cry) 
+    } 
+  } 
+> let tusk2 = { 
+    __proto__: tusk1, 
+    act2() { 
+      super.act1() 
+      console.log("Tail") 
+    } 
+  } 
+> tusk2.cry 
+> tusk2.act1() 
+> tusk2.act2() 
+> function Func() { 
+    this.prop = "プロパティ" 
+    // this.method = () => `メソッド:${this.prop}` 
+  } 
+  Func.prototype = { 
+    method: function() { 
+      return `メソッド:${this.prop}` 
+    } 
+  } 
+> let obj = new Func() 
+> obj.prop 
+> obj.method() 
+> Object.getPrototypeOf(obj) 
+> Object.getPrototypeOf(obj) === Func.prototype 
+> function myNew(func) { 
+    const obj = {} 
+    func.apply(obj) 
+    Object.setPrototypeOf(obj, func.prototype) 
+    return obj 
+  } 
+> let obj2 = myNew(Func) 
+> obj2.prop 
+> obj2.method() 
+> Object.getPrototypeOf(obj2) 
+> Object.getPrototypeOf(obj2) === Func.prototype 
+> function ChildFunc() { 
+    Func.call(this) 
+    this.childProp = "子プロパティ" 
+  } 
+  ChildFunc.prototype = { 
+    childMethod: function() { 
+      return "子メソッド" 
+    } 
+  } 
+  Object.setPrototypeOf(ChildFunc.prototype, Func.prototype) 
+  ChildFunc.prototype.constructor = ChildFunc 
+> let child = new ChildFunc() 
+> child.childProp 
+> child.childMethod() 
+> child.prop 
+> child.method() 
+> typeof ChildClass 
+> ChildClass() 
+> ChildClass.prototype 
+> let c = new ChildClass() 
+> Object.getPrototypeOf(c) === ChildClass.prototype 
+> c.constructor === ChildClass 
+
+/*ch23*/
+> let ca = new CA1({ 
+    rule:30,  
+    states:[ 
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 
+      1, 
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+    ] 
+  }) 
+  for (let i = 0; i <= 20; i++) { 
+    addResult(ca) 
+    ca.next() 
+  } 
+> 1 + 2 + 3 + "ダー" 
+> "加藤" + 1 + 2 + 3 
+> let days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] 
+> days[5] 
+> let ko1 = {id: 1, name: "Echoes", parameters: [ 
+    {power: "E", speed: "E", range: "B"}, // ACT1 
+    {power: "C", speed: "D", range: "B"}, // ACT2 
+    {power: "B", speed: "B", range: "C"}, // ACT3 
+  ]} 
+> let {name, parameters:[{speed:speed1}, , {speed:speed3}]} = ko1 
+> [name, speed1, speed3] 
+> 600 - 100 * 2 - 80 * 3 
+> const func = () => { 
+    try { 
+      try { 
+        throw Error("[例外1]") 
+      } catch ({message}) { 
+        throw Error(`${message}[例外処理1]`) 
+      } finally { 
+        throw Error("[終了処理1]") 
+      } 
+    } catch ({message}) { 
+      throw Error(`${message}[例外処理2]`) 
+    } 
+  } 
+  try { 
+    func() 
+  } catch ({message}) { 
+    throw Error(`${message}[例外処理3]`) 
+  } 
+> class User { 
+    constructor(id, name) { 
+      this.id = id 
+      this.name = name 
+    } 
+    post() { 
+      console.log(`post by ${this.name}`) 
+    } 
+  } 
+  class Administrator extends User { 
+    publish() { 
+      console.log(`publish by ${this.name}`) 
+    } 
+  } 
+> let admin = new Administrator(999, "管理者") 
+> admin.post() 
+> admin.publish() 
+> admin instanceof User 
+> admin instanceof Administrator 
+> let user = { 
+    post() { 
+      console.log(`post by ${this.name}`) 
+    } 
+  } 
+  let administrator = { 
+    __proto__: user, 
+    publish() { 
+      console.log(`publish by ${this.name}`) 
+    } 
+  } 
+> administrator.id = 999 
+> administrator.name = "管理者" 
+> administrator.post() 
+> administrator.publish() 
+> 80.7 - 10.6 
+> Number.MAX_VALUE + Number.MAX_VALUE - Number.MAX_VALUE 
+> -Number.MAX_VALUE + Number.MAX_VALUE + Number.MAX_VALUE 
+> typeof NaN 
+> const re = /<([^/ !>]+)/g 
+  const html = ` 
+    <html lang="ja"> 
+      <head><!-- 頭 --></head> 
+      <body class="dark">体</body> 
+    </html> 
+  `; 
+  [...html.matchAll(re)].map(ary => ary[1]) 
+> [1, 4, 5].map(n => n * n).reduce((sum, n) => sum += n) 
+> let map = new Map([["k1", "v1"]]) 
+  map.k1 = "v2" 
+  console.log(map["k1"]) 
+> let days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] 
+> [...new Set(days)] 
+> function* fibonacci() { 
+    let n0 = -1 
+    let n1 = 1 
+    while (true) { 
+      [n0, n1] = [n1, n0 + n1] 
+      yield n1 
+    } 
+  } 
+> let result = [] 
+  let count = 10 
+  for (let n of fibonacci()) { 
+    result.push(n) 
+    if (--count === 0) break 
+  } 
+  result 
+> let binary = new Int32Array([-570238871, -1738642577]).buffer 
+  let i16 = new Int16Array(binary) 
+  String.fromCharCode(...i16) 
+> const deepCopy = obj => { 
+    let dup 
+    if (Array.isArray(obj)) { 
+      dup = obj.map(e => deepCopy(e)) 
+    } else if (typeof obj === "object") { 
+      dup = {} 
+      for (let [k, v] of Object.entries(obj)) { 
+        dup[k] = deepCopy(v)  
+      } 
+    } else { 
+      dup = obj 
+    } 
+    return dup 
+  } 
+> let ko1 = {id: 1, name: "Echoes", parameters: [ 
+    {power: "E", speed: "E", range: "B"}, 
+    {power: "C", speed: "D", range: "B"}, 
+    {power: "B", speed: "B", range: "C"}, 
+  ]} 
+> let ko2 = deepCopy(ko1) 
+> ko2 
+> ko2.parameters[0].power = "A" 
+> ko1.parameters[0].power 
+> let neroBirthday = new Date(0, 11, 15) 
+  neroBirthday.setFullYear(37) 
+  neroBirthday 
+> let kiraBirthday = new Date("1966-01-30T00:00:00+09:00") 
+  let opts = { 
+    timeZone:"UTC",  
+    year:"numeric", month:"numeric", day:"numeric", 
+    hour:"numeric", minute:"numeric" 
+  } 
+  let df = new Intl.DateTimeFormat("en-GB", opts) 
+  df.format(kiraBirthday) 
+> date = new Date(-999, 0, 1) 
+> new Intl.DateTimeFormat("en", {era:"short", year:"numeric"}).format(date) 
+> Promise.resolve(42) 
+    .then(() => console.log("FIRST")) 
+    .catch(() => console.log("first catch")) 
+    .then(() => console.log("SECOND")) 
+    .then(() => { 
+        console.log("FIRST ERROR") 
+        return Promise.reject() 
+    }) 
+    .then(() => "third") 
+    .then(() => console.log("fourth")) 
+    .catch(() => console.log("SECOND CATCH")) 
+    .then(() => console.log("FIFTH")) 
+    .catch(() => console.log("third catch")) 
+    .finally(() => console.log("FIRST FINALLY")) 
+> let extendNumber = num => new Proxy(Object(num), { 
+    get(target, propertyKey) { 
+      if (propertyKey in target) { 
+        const prop = Reflect.get(target, propertyKey) 
+        if (typeof prop === "function") { 
+          return prop.bind(target) 
+        } else { 
+          return prop 
+        } 
+      } else if (propertyKey in Math) { 
+        return (...args) => Math[propertyKey](target, ...args) 
+      } 
+      return undefined 
+    } 
+  }) 
+  let en = extendNumber(3.14) 
+> en.round() 
+> en.ceil() 
+> en.pow(2) 
+> en.toString() 
+> document.getElementsByTagName("img") 
+> document.getElementsByTagName("img")[1] 
+> document.getElementsByTagName("img")["logo-doodle-image"] 
+> document.getElementsByTagName("img")[1].style.border = "1px solid black" 
+> const rule = "#logo-doodle-image {border:1px solid black}" 
+  document.styleSheets[0].insertRule(rule) 
+> let clicking  
+  document.body.addEventListener("mousedown", () => clicking = true) 
+  document.body.addEventListener("mouseup", () => clicking = false) 
+  document.body.addEventListener("mousemove", evt => { 
+    if (!(clicking && evt.shiftKey)) return 
+    const dot = document.createElement("div") 
+    dot.className = "dot" 
+    dot.style.left = `${evt.clientX}px` 
+    dot.style.top = `${evt.clientY}px` 
+    document.body.append(dot) 
+  }) 
+> fetch("https://jsonplaceholder.typicode.com/posts/1/comments") 
+    .then(response => response.json()) 
+    .then(json => console.log(json)) 
+> fetch("https://jsonplaceholder.typicode.com/posts/1", { 
+    method: "PATCH", 
+    body: JSON.stringify({body:"Wryyy"}), 
+    headers: { 
+      "Content-type": "application/json" 
+    } 
+  }).then(response => response.json()).then(json => console.log(json)) 
+> localStorage.setItem("key", "value") 
+> sessionStorage.setItem("key", "value") 
+> let openReq = indexedDB.open("todoapp", 1) 
+  openReq.addEventListener("upgradeneeded", evt => { 
+    const db = evt.target.result 
+    const todos = db.createObjectStore("todos", 
+      {keyPath: "id", autoIncrement:true}) 
+    todos.createIndex("doneIndex", "done") 
+  }) 
+  openReq.addEventListener("success", evt => { 
+    const db = evt.target.result 
+    const transaction = db.transaction("todos", "readwrite") 
+    const todos = transaction.objectStore("todos") 
+    todos.add({text:"前書きを書く", done:true}) 
+    todos.add({text:"練習問題を作成する", done:false}) 
+  }) 
+> let img = new Image(250, 150) 
+  img.src = "./JavaScript-logo.png" 
+> img.addEventListener("load", evt => console.log( 
+    img.width, img.height, img.naturalWidth, img.naturalHeight)) 
+> let img = document.getElementById("image") 
+  let ctx = document.getElementById("canvas").getContext("2d") 
+  ctx.drawImage(img, 0, 0) 
+  let imageData1 = ctx.getImageData(0, 0, 200, 200) 
+  let imageData2 = ctx.getImageData(0, 0, 200, 200) 
+  const d = 5 
+  for (let y = d; y < 200-d; y += 1) { 
+    for (let x = d; x < 200-d; x += 1) { 
+      let [ar, ag, ab] = [0, 0, 0] 
+      for (let dy = -d; dy < d; dy++) { 
+        for (let dx = -d; dx < d; dx++) { 
+          const r = imageData1.data[(y+dy)*200*4 + (x+dx)*4] 
+          const g = imageData1.data[(y+dy)*200*4 + (x+dx)*4+1] 
+          const b = imageData1.data[(y+dy)*200*4 + (x+dx)*4+2] 
+          ar += r 
+          ag += g 
+          ab += b 
+        } 
+      } 
+      imageData2.data[y*200*4 + x*4] = Math.floor(ar / Math.pow(2*d, 2)) 
+      imageData2.data[y*200*4 + x*4+1] = Math.floor(ag / Math.pow(2*d, 2)) 
+      imageData2.data[y*200*4 + x*4+2] = Math.floor(ab / Math.pow(2*d, 2)) 
+    } 
+  } 
+  ctx.putImageData(imageData2, 0, 0) 
+> // 元のcanvasと同じ大きさのOffscreenCanvasを作成し、GLコンテキストを取得 
+  let canvas = document.getElementById("canvas") 
+  let offscreen = new OffscreenCanvas(canvas.width, canvas.height) 
+  const gl = offscreen.getContext("webgl") 
+  // 以下、drawArrays()までは本文で使用したWebGL例と同じです 
+  const vertices = [-0.5, 0.5, -0.5, -0.5, 0.5, -0.5] 
+  const vertexBuffer = gl.createBuffer() 
+  // ...省略... 
+  gl.viewport(0, 0, canvas.width, canvas.height) 
+  gl.drawArrays(gl.TRIANGLES, 0, 3) 
+  // OffscreenCanvasの描画結果を転送 
+  let ctx = canvas.getContext("bitmaprenderer") 
+  ctx.transferFromImageBitmap(offscreen.transferToImageBitmap()) 
+> let audioContext = new AudioContext() 
+  fetch("./bulbul.mp3").then(resp => { 
+    return resp.arrayBuffer() 
+  }).then(buffer => { 
+    return audioContext.decodeAudioData(buffer) 
+  }).then(buffer => { 
+    // ノード作成 
+    const source = audioContext.createBufferSource() 
+    source.buffer = buffer 
+    let filter = audioContext.createBiquadFilter() 
+    filter.type = "lowpass" 
+    filter.frequency.value = 500 
+    let analyser = audioContext.createAnalyser() 
+    analyser.fftSize = 256 
+    // オーディオグラフ構築 
+    source.connect(filter).connect(analyser).connect( 
+      audioContext.destination) 
+    // 描画関数定義（本文と同じ） 
+    let bufferLength = analyser.frequencyBinCount 
+    let dataArray = new Uint8Array(bufferLength) 
+    let height = 200 
+    let ctx = document.getElementById("canvas").getContext("2d") 
+    let imageData = ctx.getImageData(0, 0, bufferLength, height) 
+    let count = 0 
+    let draw = () => { 
+      analyser.getByteFrequencyData(dataArray) 
+      for (let i = 0; i < dataArray.length; i++) { 
+        imageData.data[4*(128*count + i)] = dataArray[i] 
+        imageData.data[4*(128*count + i) + 1] = dataArray[i] 
+        imageData.data[4*(128*count + i) + 2] = dataArray[i] 
+        imageData.data[4*(128*count + i) + 3] = 255 
+      } 
+      if (count < height) { 
+        count++ 
+        requestAnimationFrame(draw) 
+      } else { 
+        ctx.putImageData(imageData, 0, 0) 
+      } 
+    } 
+    // 再生して結果を描画 
+    source.start(0, 0, 4) 
+    draw() 
+  }) 
+> for (let propName of Object.getOwnPropertyNames(window)) { 
+    const prop = window[propName] 
+    if (Sensor.isPrototypeOf(prop)) { 
+      console.log(propName) 
+    } 
+  } 
+> let canvas = document.getElementById("canvas") 
+  let offscreen = canvas.transferControlToOffscreen() 
+  let worker7 = new Worker("js/worker7.js") 
+  worker7.postMessage({canvas:offscreen}, [offscreen]) 

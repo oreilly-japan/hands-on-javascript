@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+    #audio {
+      transition-property:transform, filter;
+      transition-duration:2s;
+      transition-timing-function:ease-in-out;
+    }
+    #audio.invert-rotate {
+      filter: invert(100%);
+      transform: rotate(360deg);
+    }
+    </style>
+  </head>
+  <body>
+    <!-- https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png -->
+    <img id="image" src="./JavaScript-logo.png" width="200" />
+    <canvas id="canvas" width="200" height="200"></canvas>
+    <br />
+    <video id="video" src="./Network-12716.mp4" controls width="400"></video><br />
+    <audio id="audio" src="./brook1.mp3" controls></audio>
+
+    <section>
+      <h3>Ref.</h3>
+      <ul>
+        <li><a href="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" target="_blank">Image</a></li>
+        <li><a href="https://pixabay.com/videos/network-loop-energy-technology-12716/" target="_blank">Video</a></li>
+        <li><a href="https://taira-komori.jpn.org/nature01.html" target="_blank">Audio</a></li>
+      </ul>
+    </section>
+  </body>
+</html>

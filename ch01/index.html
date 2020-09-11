@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Ch. 1. Cellular Automaton</title>
+    <style>
+      /* 全体的な設定 */
+      :root {
+        /* 一行あたりのセルの数 */
+        --cells:41;
+
+        /* 一行あたりの幅 */
+        --width:410px;
+
+        /* セルの幅 ＝ 一行あたりの幅 ／ 一行あたりのセルの数*/
+        --cell-size:calc(var(--width)/var(--cells));
+      }
+
+      /* 表全体の見た目 */
+      #result {
+        /* フレックスボックスを使用してレイアウト */
+        display:flex;
+
+        /* 横方向に並べ、必要に応じて折り返す */
+        flex-flow:row wrap;
+
+        /* 横幅 */
+        width:var(--width);
+
+        /* 枠線。幅1px、実線、灰色 */
+        border-bottom:1px solid gray;
+        border-right:1px solid gray;
+      }
+
+      /* セルの見た目（基本） */
+      .cell {
+        /* 幅 */
+        flex:var(--cell-size);
+
+        /* 高さ */
+        height:var(--cell-size);
+
+        /* 枠線をサイズ計算に含めない */
+        box-sizing:border-box;
+
+        /* 枠線。幅1px、実線、灰色 */
+        border-top:1px solid gray;
+        border-left:1px solid gray;
+      }
+
+      /* 0に対応するセル */
+      .dead { background-color:white; }
+
+      /* 1に対応するセル */
+      .live { background-color:black; }
+    </style>
+  </head>
+  <body>
+    <div id="result"></div>
+    <script type="module">
+      import { CA1Rule90, CA1 } from "./ca.js"
+
+      function addResult(ca) {
+        const result = document.getElementById("result")
+        for (let i = 0; i < ca.states.length; i++) {
+          const cell = document.createElement("div")
+          if (ca.states[i] === "0") {
+            cell.classList.add("cell", "dead")
+          } else {
+            cell.classList.add("cell", "live")
+          }
+          result.appendChild(cell)
+        }
+      }
+
+      const ca1 = new CA1Rule90("00000000000000000000100000000000000000000")
+      for (let i = 0; i <= 20; i++) {
+        addResult(ca1)
+        ca1.next()
+      }
+
+      // 練習問題用
+      window.CA1 = CA1
+      window.addResult = ca => {
+        const result = document.getElementById("result")
+        for (let i = 0; i < ca.states.length; i++) {
+          const cell = document.createElement("div")
+          cell.classList.add("cell", ca.states[i] === 0 ? "dead" : "live")
+          result.appendChild(cell)
+        }
+      }
+    </script>
+  </body>
+</html>

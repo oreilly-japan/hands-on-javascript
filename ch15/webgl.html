@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <body>
+    <canvas width="300" height="300" id="glcanvas"></canvas>
+		
+    <script>
+      // glコンテキストを用意する
+      const canvas = document.getElementById('glcanvas');
+      const gl = canvas.getContext('webgl');
+
+      // バッファオブジェクトに頂点を保存する
+      const vertices = [-0.5, 0.5, -0.5, -0.5, 0.5, -0.5,];
+      const vertexBuffer = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
+      gl.bindBuffer(gl.ARRAY_BUFFER, null);
+
+      // 頂点シェーダーを作成する
+      const vertexCode = `
+        attribute vec2 coordinates;
+        varying vec2 color;
+        void main(void) {
+          gl_Position = vec4(coordinates, 0., 1.);
+          color = coordinates * 0.5 + 0.5;
+        }
+      `;
+      const vertexShader = gl.createShader(gl.VERTEX_SHADER);
+      gl.shaderSource(vertexShader, vertexCode);
+      gl.compileShader(vertexShader);
+
+      // フラグメントシェーダーを作成する
+      const fragmentCode = `
+        precision mediump float;
+        varying vec2 color;
+        void main(void) {
+          //gl_FragColor = vec4(1., 1., 1., 1.);
+          gl_FragColor = vec4(color, 0., 1.);
+        }
+      `;
+      const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+      gl.shaderSource(fragmentShader, fragmentCode);
+      gl.compileShader(fragmentShader);
+
+      // シェーダープログラムを作成する
+      const shaderProgram = gl.createProgram();
+      gl.attachShader(shaderProgram, vertexShader); 
+      gl.attachShader(shaderProgram, fragmentShader);
+      gl.linkProgram(shaderProgram);
+      gl.useProgram(shaderProgram);
+
+      // シェーダープログラムとバッファオブジェクトを関連付ける
+      gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+      const coordinates = gl.getAttribLocation(shaderProgram, "coordinates");
+      gl.vertexAttribPointer(coordinates, 2, gl.FLOAT, false, 0, 0);
+      gl.enableVertexAttribArray(coordinates);
+
+      // 描画する
+      gl.clearColor(0., 0., 0., 1.);
+      gl.enable(gl.DEPTH_TEST); 
+      gl.clear(gl.COLOR_BUFFER_BIT);
+      gl.viewport(0, 0, canvas.width, canvas.height);
+      gl.drawArrays(gl.TRIANGLES, 0, 3);
+    </script>
+  </body>
+</html>
+<html>
+<body>

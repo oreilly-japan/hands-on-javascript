@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <body>
+    <button id="buy">購入</button>
+    <script>
+      document.getElementById("buy").addEventListener("click", () => {
+        let supportedInstruments = [{
+            supportedMethods: ["basic-card"],
+            data: { supportedNetworks: ["visa", "mastercard"] }
+        }]
+        let details = {
+          displayItems: [{
+            label: "かけそば",
+            amount: { currency: "JPY", value: "150" }
+          }],
+          total: {
+            label: "合計",
+            amount: { currency: "JPY", value : "150" }
+          }
+        }
+        let request = new PaymentRequest(supportedInstruments, details)
+        request.show().then(result => {
+          console.log(result.toJSON())
+          // result.toJSON()をサーバーに送信して決済を実行する
+          result.complete("success")
+        })
+      })
+    </script>
+  </body>
+</html>

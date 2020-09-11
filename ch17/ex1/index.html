@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js', {scope:"/handsonjs/ch17/"}).then(registration => {
+          console.log('ServiceWorker登録成功');
+          console.log(registration)
+        }, err => {
+          console.log('ServiceWorker登録失敗: ', err);
+        });
+      });
+    </script>
+  </body>
+</html>

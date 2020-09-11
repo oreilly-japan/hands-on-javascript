@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Web Components</title>
+  </head>
+  <body>
+    <info-panel name="Black Sabbath" power="E" speed="A" range="A"></info-panel>
+
+    <template id="info-panel-template">
+      <style>
+        .info-panel {
+          margin: 10px;
+          padding: 10px;
+          border: 1px solid gray;
+        }
+        dt {
+          width: 120px;
+          float: left;
+        }
+      </style>
+      <div class="info-panel">
+        <h1 id="name"></h1>
+        <dl>
+          <dt>Power</dt><dd id="power"></dd>
+          <dt>Speed</dt><dd id="speed"></dd>
+          <dt>Range</dt><dd id="range"></dd>
+        </dl>
+      </div>
+    </template>
+
+    <script>
+      class InfoPanel extends HTMLElement {
+        constructor() {
+          super()
+          const template = document.getElementById("info-panel-template")
+          const content = template.content.cloneNode(true);
+          ["name", "power", "speed", "range"].forEach(id => 
+            content.getElementById(id).textContent = this.getAttribute(id))
+
+          const shadow = this.attachShadow({mode: "open"})
+          shadow.append(content)
+        }
+      }
+      customElements.define("info-panel", InfoPanel)
+    </script>
+  </body>
+</html>

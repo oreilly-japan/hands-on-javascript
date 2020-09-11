@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <style>
+      #box {
+        border:1px solid gray;
+        width:50px;
+        height:50px;
+        position:absolute;
+        top:10px;
+        left:10px;
+      }
+
+      #box.move {
+        animation-name:loop;
+        animation-duration:10s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes loop {
+        0% {
+          top:10px;
+          left:10px;
+          transform:rotate(0deg);
+        }
+
+        33% {
+          top:calc(100vh - 60px);
+          left:10px;
+          transform:rotate(90deg);
+        }
+
+        66% {
+          top:calc(100vh - 60px);
+          left:calc(100vw - 60px);
+          transform:rotate(180deg);
+        }
+
+        100% {
+          top:10px;
+          left:10px;
+          transform:rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box" class="move"></div>
+  </body>
+</html>

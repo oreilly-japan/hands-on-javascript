@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>ウェブ</title>
+    <style>
+    h1 {
+      background:black;
+      color:white;
+      margin:10px;
+      padding:10px;
+    }
+    p {
+      border:1px solid gray;
+      margin:10px;
+      padding:5px;
+    }
+    strong {
+      color:red;
+      font-size:1.5em;
+    }
+    </style>
+  </head>
+  <body>
+    <section id="html" class="note">
+      <h1>HTML</h1>
+      <p><strong>HTML</strong>は文書のコンテンツと構造を表現します。</p>
+    </section>
+    <section id="css" class="note">
+      <h1>CSS</h1>
+      <p><strong>CSS</strong>はHTMLのスタイルを指定します。</p>
+    </section>
+    <section id="js" class="note">
+      <h1>JavaScript</h1>
+      <p><strong>JavaScript</strong>はHTMLとCSSの両方を制御できます。</p>
+    </section>
+    <script>
+    document.body.addEventListener("click", function() {
+      this.style.filter = this.style.filter ? "" : "blur(5px)"
+    })
+    </script>
+  </body>
+</html>
