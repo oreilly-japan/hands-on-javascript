@@ -1,9 +1,20 @@
 <!doctype html>
 <html>
   <head>
+    <meta charset="utf-8">
     <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body>
     Installable app
+    <script>
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/ch17/ex4/sw.js').then(registration => {
+          console.log('ServiceWorker登録成功');
+          console.log(registration)
+        }, err => {
+          console.log('ServiceWorker登録失敗: ', err);
+        });
+      });
+    </script>
   </body>
 </html>

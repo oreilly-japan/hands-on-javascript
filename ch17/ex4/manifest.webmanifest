@@ -1,8 +1,10 @@
 {
   "name": "サンプルアプリ名",
   "description": "どのようなアプリであるかの説明",
+  "display": "fullscreen",
   "icons": [{
-    "src": "icon.png",
-    "sizes": "192x192"
-  }]
+    "src": "/ch17/ex4/icon.png",
+    "sizes": "256x256"
+  }],
+  "start_url": "/ch17/ex4/"
 }

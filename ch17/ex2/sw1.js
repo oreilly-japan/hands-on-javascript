@@ -2,7 +2,7 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open('v1').then(cache => {
       return cache.addAll([
-        '/v1/page1.html'
+        '/ch17/ex2/v1/page1.html'
       ]);
     })
   );

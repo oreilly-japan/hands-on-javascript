@@ -5,7 +5,7 @@
   <body>
     <script>
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw1.js', {scope:"./v1/"}).then(registration => {
+        navigator.serviceWorker.register('/ch17/ex2/sw1.js', {scope:"./v1/"}).then(registration => {
           console.log('ServiceWorker登録成功');
         }, err => {
           console.log('ServiceWorker登録失敗: ', err);

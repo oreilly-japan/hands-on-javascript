@@ -3,9 +3,10 @@
     <meta charset="utf-8">
   </head>
   <body>
+    /proxy/以下で拡張子を".html"にすると生成（プロキシ）された内容が返ります。
     <script>
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js', {scope:"/handsonjs/ch17/"}).then(registration => {
+        navigator.serviceWorker.register('/ch17/ex1/sw.js').then(registration => {
           console.log('ServiceWorker登録成功');
           console.log(registration)
         }, err => {
