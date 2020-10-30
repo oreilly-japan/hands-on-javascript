@@ -3000,7 +3000,6 @@ false
 == HTMLファイルでモジュールとしてJavaScriptファイルを読み込む
 
 [LIST 5-1]
-#@# //emlist[ch05/ex1/index.html][]{
 <!doctype html>
 <html>
   <head>
@@ -3009,7 +3008,6 @@ false
 </html>
 
 [LIST 5-2]
-#@# //emlist[ch05/ex1/index.html][]{
 <script type="module">
   import "./module.js"
 </script>
@@ -3023,11 +3021,9 @@ import 〈インポート対象〉 from "〈モジュール名〉"
 import "〈モジュール名〉"
 
 [LIST 5-5]
-#@# //emlist[ch05/ex2/sideeffect.js][]{
 console.log("モジュールの副作用")
 
 [LIST 5-6]
-#@# //emlist[ch05/ex2/index.html][]{
 <script type="module">
 console.log("最初のインポート")
 import "./sideeffect.js"
@@ -3045,7 +3041,6 @@ sideeffect.js:1 モジュールの副作用
 === オブジェクトを指定してインポートする
 
 [LIST 5-8]
-#@# //emlist[ch05/ex3/index.html][]{
 import { Klass, func } from "./module.js"
 
 [LIST 5-9]
@@ -3055,14 +3050,12 @@ window.func = func
 ==== 別名を付けてインポートする
 
 [LIST 5-10]
-#@# //emlist[ch05/ex4/index.html][]{
 import { Klass, func } from "./module.js"
 import { Klass as Klass2, func as func2 } from "./module2.js"
 
 ==== モジュールオブジェクトのプロパティとしてインポートする
 
 [LIST 5-11]
-#@# /emlist[ch05/ex5/index.html][]{
 import * as Module from "./module.js"
 console.log(Module.Klass, Module.func, Module.variable, Module.constant)
 
@@ -3076,7 +3069,6 @@ import Module from "./module.js"
 console.log(mod)
 
 [LIST 5-14]
-#@# //emlist[ch05/ex6/index.html][]{
 import Module, { Klass, func } from "./module.js"
 console.log(Module, Klass, func)
 
@@ -3087,7 +3079,6 @@ class Klass {} ƒ func() { return "module func" }
 == 動的にモジュールをインポートする
 
 [LIST 5-16]
-#@# //emlist[ch05/ex7/index.html][]{
 import("./module.js").then(Module => {
   console.log(Module)
 })
@@ -3113,7 +3104,6 @@ export let variable = "var"
 export const constant = "constant"
 
 [LIST 5-19]
-#@# //emlist[ch05/ex7/module.js][]{
 class Klass {}
 function func() { return "module func" }
 let variable = "var"
@@ -3151,17 +3141,14 @@ export default constant
 export { Klass, func } from "./submodule.js"
 
 [LIST 5-25]
-#@# //emlist[ch05/ex8/module.js][]{
 export { Klass as K, func as f } from "./submodule.js"
 
 [LIST 5-26]
-#@# //emlist[ch05/ex8/module.js][]{
 export * from "./submodule.js"
 
 === インポートしたデフォルトエクスポートをエクスポートする
 
 [LIST 5-27]
-#@# //emlist[ch05/ex8/module.js][]{
 export { default } from "./submodule.js"
 
 == まとめ
@@ -6767,7 +6754,6 @@ en.toString() // => "3.14"
 === HTML
 
 [LIST 12-1]
-#@# //emlist[ch12/ex1/index.html][]{
 <!doctype html>
 <html lang="ja">
   <head>
@@ -6793,7 +6779,6 @@ en.toString() // => "3.14"
 === CSS
 
 [LIST 12-2]
-#@# //emlist[ch12/ex2/index.html][]{
 h1 {
   background:black;
   color:white;
@@ -6816,7 +6801,6 @@ strong {
 === JavaScript
 
 [LIST 12-4]
-#@# //emlist[ch12/ex2/index.html][]{
 <script>
 document.body.addEventListener("click", function() {
   this.style.filter = this.style.filter ? "" : "blur(5px)"
@@ -7156,7 +7140,6 @@ undefined
 "200%"
 
 [LIST 12-53]
-#@# //emlist[ch12/ex2/index.html（再掲）][]{
 h1 {
   background:black;
   color:white;
@@ -8418,7 +8401,6 @@ undefined
 "rotate(360deg)"
 
 [LIST 15-15]
-#@# //emlist[ch15/ex1/index.html][]{
 #audio {
   transition-property:transform, filter;
   transition-duration:2s;
@@ -8428,7 +8410,6 @@ undefined
 === クラスを利用する
 
 [LIST 15-16]
-#@# //emlist[ch15/ex1/index.html][]{
 #audio.invert-rotate {
   filter: invert(100%);
   transform: rotate(360deg);
@@ -8672,7 +8653,6 @@ Uint8ClampedArray(4) [50, 50, 48, 255]
 === シェーダー
 
 [LIST 15-41]
-#@# //emlist[][c]{
 void main(void) {
   gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
   vTextureCoord = aTextureCoord;
@@ -9189,7 +9169,6 @@ for (let propName of Object.getOwnPropertyNames(window)) {
 === Service Workerの利用を開始する
 
 [LIST 17-1]
-#@# //emlist[ch17/ex1/index.html][]{
 <html>
   <head><meta charset="utf-8"></head>
   <body>
@@ -9216,7 +9195,6 @@ for (let propName of Object.getOwnPropertyNames(window)) {
   navigationPreload: NavigationPreloadManager, …}
 
 [LIST 17-3]
-#@# //emlist[ch17/ex1/sw.js][]{
 self.addEventListener("install", event => {
   console.log(`install:${event}`)
 })
@@ -9234,7 +9212,6 @@ sw.js:6 activate:[object ExtendableEvent]
 === HTTPリクエストをプロキシする
 
 [LIST 17-6]
-#@# //emlist[ch17/ex1/sw.js][]{
 self.addEventListener('fetch', event => {
   event.respondWith(new Promise((resolve, reject) => {
     const pathname = new URL(event.request.url).pathname
@@ -9261,7 +9238,6 @@ self.addEventListener('fetch', event => {
 　　　└──page2.html   @<ami>{初回読み込み時にキャッシュする}
 
 [LIST 17-8]
-#@# //emlist[ch17/ex2/index.html][]{
 window.addEventListener("load", () => {
   navigator.serviceWorker.register("/sw1.js", {scope:"./v1/"}).then(
     registration => {
@@ -9272,7 +9248,6 @@ window.addEventListener("load", () => {
 })
 
 [LIST 17-9]
-#@# //emlist[ch17/ex2/sw1.js][]{
 self.addEventListener("install", event => {
   event.waitUntil(
     caches.open("v1").then(cache => {
@@ -9296,7 +9271,6 @@ self.addEventListener("fetch", event => {
 })
 
 [LIST 17-12]
-#@# //emlist[ch17/ex2/sw1.js][]{
 self.addEventListener("fetch", event => {
   event.respondWith(caches.match(event.request).then(response => {
     return response || fetch(event.request).then(response => {
@@ -9329,7 +9303,6 @@ Private Key:
 =======================================
 
 [LIST 17-14]
-#@# //emlist[ch17/ex3/index.html][]{
 const vapidKey = "ABcdeFG123ABcdeFG12...3ABcdeFG" // 作成した公開鍵
 const convertedVapidKey = urlBase64ToUint8Array(vapidKey)
 
@@ -9345,7 +9318,6 @@ window.addEventListener("load", () => {
 })
 
 [LIST 17-15]
-#@# //emlist[ch17/ex3/index.html][]{
 function urlBase64ToUint8Array(base64String) {
   const padding = '='.repeat((4 - base64String.length % 4) % 4);
   const base64 = (base64String + padding)
@@ -9381,7 +9353,6 @@ sw.js:2 Test push message from DevTools.
 ==== 通知ダイアログを表示する
 
 [LIST 17-19]
-#@# //emlist[ch17/ex3/sw.js][]{
 self.addEventListener("push", event => {
   const data = event.data.json()
   event.waitUntil(
@@ -9396,11 +9367,9 @@ self.addEventListener("push", event => {
 === アプリに関する情報を提供する
 
 [LIST 17-21]
-#@# //emlist[ch17/ex4/index.html][]{
 <link rel="manifest" href="manifest.webmanifest">
 
 [LIST 17-22]
-#@# //emlist[ch17/ex4/manifest.webmanifest][]{
 {
   "name": "サンプルアプリ名",
   "description": "どのようなアプリであるかの説明",
@@ -9447,7 +9416,6 @@ Object
   __proto__: Object
 
 [LIST 17-25]
-#@# //emlist[ch17/ex5/index.html][]{
 let supportedInstruments = [{
   supportedMethods: ["basic-card"],
   data: {supportedNetworks: ["visa", "mastercard"]}
@@ -9842,7 +9810,6 @@ PerformanceMark {detail: null, name: "オラオラ", entryType: "mark", ...}
 ==== ワーカーを開始する
 
 [LIST 19-14]
-#@# //emlist[ch19/js/worker1.js][]{
 console.log("worker1実行中")
 while (true) {}
 
@@ -9857,7 +9824,6 @@ worker1.js:1 worker1実行中
 ==== ワーカーとメッセージをやりとりする
 
 [LIST 19-17]
-#@# //emlist[ch19/js/worker2.js][]{
 self.addEventListener("message", event => {
   const name = event.data
   if (typeof name !== "string") throw "名前が文字列ではありません"
@@ -9908,7 +9874,6 @@ worker2.js:3 Uncaught 名前が文字列ではありません
 ==== ワーカーとやりとりするデータについて理解する
 
 [LIST 19-22]
-#@# //emlist[ch19/js/worker3.js][]{
 let messageData
 self.addEventListener("message", event => messageData = event.data)
 
@@ -9967,7 +9932,6 @@ Uint32Array(3) [81194, 22194, 63194]
 ==== ワーカーに別のスクリプトファイルを取り込む
 
 [LIST 19-31]
-#@# //emlist[ch19/js/worker4.js][]{
 importScripts("https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.6.2/math.js")
 self.addEventListener("message", event => {
   postMessage(math.evaluate(event.data))
@@ -9985,7 +9949,6 @@ undefined
 ==== ワーカーでcanvasに描画する
 
 [LIST 19-33]
-#@# //emlist[ch19/js/worker5.js][]{
 let canvas
 self.addEventListener("message", event => {
   if ("canvas" in event.data) canvas = event.data.canvas
@@ -10023,7 +9986,6 @@ undefined
 undefined
 
 [LIST 19-38]
-#@# //emlist[ch19/js/worker6.js][]{
 let messageData = "初期値"
 
 self.addEventListener("connect", event => {
@@ -10061,7 +10023,6 @@ undefined
 === WebAssembly
 
 [LIST 19-42]
-#@# //emlist[ch19/wasm/add.wat][]{
 (module
   ;; JSから受け取る関数
   (import "console" "log" (func $log (param i32)))
