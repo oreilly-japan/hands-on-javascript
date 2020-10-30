@@ -9,6 +9,8 @@
 本リポジトリはオライリー・ジャパン発行書籍『[ハンズオンJavaScript](https://www.oreilly.co.jp/books/9784873119229/)』のサポートサイトです。
 
 ## ライセンス
+本リポジトリのソースコードは[MITライセンス](http://www.opensource.org/licenses/MIT)です。
+商用・非商用問わず、自由にご利用ください。
 
 ## 正誤表
 
