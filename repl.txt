@@ -8899,12 +8899,26 @@ Promise {<pending>}
 
 ==== マウスイベントを使用する
 
-[LIST 15-65]
+[LIST 15-65: 誤]
+> // document.addEventListener("pointerlockchange", () => { 
+  //   const mousemoveHandler = (evt) => { 
+  //     console.log(`movement:${evt.movementX},${evt.movementY 
+  //       } / client:${evt.clientX},${evt.clientY}`) 
+  //   } 
+  //   if (document.pointerLockElement) { 
+  //     document.body.addEventListener("mousemove", mousemoveHandler) 
+  //   } else { 
+  //     document.body.removeEventListener("mousemove", mousemoveHandler) 
+  //   } 
+  // }, false) 
+  // document.body.requestPointerLock() 
+
+[LIST 15-65: 正]
+> let mousemoveHandler = (evt) => { 
+    console.log(`movement:${evt.movementX},${evt.movementY 
+      } / client:${evt.clientX},${evt.clientY}`) 
+  } 
 > document.addEventListener("pointerlockchange", () => { 
-    const mousemoveHandler = (evt) => { 
-      console.log(`movement:${evt.movementX},${evt.movementY 
-        } / client:${evt.clientX},${evt.clientY}`) 
-    } 
     if (document.pointerLockElement) { 
       document.body.addEventListener("mousemove", mousemoveHandler) 
     } else { 
